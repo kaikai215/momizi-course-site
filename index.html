@@ -1,0 +1,1525 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>IG 品牌經營 × 手機攝影實戰班｜Leresa 椛 × RuRu</title>
+<meta name="description" content="美容工作者的一日實戰課。從品牌定位、IG 內容企劃、AI 應用到手機攝影與修圖。台北場 09/16、10/14。">
+<meta property="og:title" content="IG 品牌經營 × 手機攝影實戰班">
+<meta property="og:description" content="妳缺的可能不是作品，而是讓作品被看見的方法。">
+<meta name="theme-color" content="#EDECEA">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://請換成你的網址/images/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Noto+Sans+TC:wght@200;300;400&family=Noto+Serif+TC:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bone:#EDECEA;
+  --white:#F8F7F5;
+  --clay:#DDD8CF;
+  --hair:rgba(44,44,44,.13);
+  --ink:#2C2C2C;
+  --ink2:#6B6862;
+  --coffee:#8B6F4E;
+  --dark:#2B2622;
+  --dark2:#1D1916;
+
+  --serif:"Noto Serif TC",Georgia,serif;
+  --sans:"Noto Sans TC","PingFang TC",-apple-system,sans-serif;
+  --latin:"Cormorant Garamond",Georgia,serif;
+
+  --pad:clamp(24px,6vw,96px);
+  --maxw:1240px;
+  --gap:clamp(64px,11vw,150px);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bone);color:var(--ink);
+  font-family:var(--sans);font-weight:300;
+  font-size:15px;line-height:2.05;letter-spacing:.05em;
+  -webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent;
+  overflow-x:hidden
+}
+img{display:block;max-width:100%}
+button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:1px solid var(--coffee);outline-offset:4px}
+section[id]{scroll-margin-top:0}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad)}
+.narrow{max-width:760px}
+.sec{padding:var(--gap) 0}
+.dark{background:var(--dark);color:var(--bone)}
+.dark .lead{color:rgba(237,236,234,.66)}
+.deep{background:var(--dark2);color:var(--bone)}
+
+/* type */
+h1,h2,h3{font-family:var(--serif);font-weight:200;margin:0}
+.label{
+  font-size:10.5px;font-weight:400;letter-spacing:.44em;color:var(--coffee);
+  margin:0 0 34px;font-family:var(--sans)
+}
+.dark .label{color:#C0A480}
+h2{
+  font-size:clamp(27px,5.4vw,46px);line-height:1.58;letter-spacing:.1em;
+  margin:0 0 30px
+}
+h2 em{font-style:normal;color:var(--coffee)}
+.dark h2 em{color:#D0B392}
+.lead{
+  font-size:15px;line-height:2.15;color:var(--ink2);
+  max-width:44ch;margin:0;letter-spacing:.06em
+}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity 1.1s ease,transform 1.1s cubic-bezier(.16,.7,.3,1)}
+.rv.in{opacity:1;transform:none}
+
+/* ═ nav ═ */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:60;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:20px var(--pad);color:var(--bone);
+  transition:background .5s,color .5s,padding .4s
+}
+.nav.tight{padding:14px var(--pad)}
+.nav.on-light{color:var(--ink)}
+.nav.on-light .nb-1{opacity:.6}
+.nav.on-dark{color:var(--bone)}
+.nav.on-photo{text-shadow:0 1px 14px rgba(20,16,13,.55)}
+.nav-brand{font-family:var(--serif);font-weight:300;line-height:1.5;min-width:0}
+.nb-1{display:block;font-family:var(--sans);font-size:9px;letter-spacing:.3em;opacity:.7}
+.nb-2{display:block;font-size:14px;letter-spacing:.14em;margin-top:3px;white-space:nowrap}
+.nav-cta{
+  font-size:11px;letter-spacing:.3em;padding:9px 0;
+  border-bottom:1px solid currentColor;opacity:.85
+}
+
+/* ═ hero ═ */
+.hero{position:relative;height:100svh;min-height:560px;overflow:hidden}
+.hero-media{position:absolute;inset:0}
+.hero-media img{
+  width:100%;height:100%;object-fit:cover;object-position:50% 60%;
+  opacity:0;transform:scale(1.06);
+  transition:opacity 1.6s ease,transform 3.4s cubic-bezier(.16,.7,.3,1)
+}
+.hero-media img.on{opacity:1;transform:none}
+.hero-media::after{
+  content:"";position:absolute;inset:0;
+  background:
+    linear-gradient(to top,var(--bone) 0%,rgba(237,236,234,.94) 16%,rgba(237,236,234,.55) 34%,rgba(237,236,234,0) 62%),
+    linear-gradient(to bottom,rgba(30,26,22,.34),rgba(30,26,22,0) 34%)
+}
+.hero-copy{
+  position:absolute;left:0;right:0;bottom:clamp(52px,9vh,110px);
+  padding:0 var(--pad);max-width:var(--maxw);margin:0 auto
+}
+.hero-kick{
+  font-size:10.5px;letter-spacing:.42em;color:var(--coffee);margin:0 0 22px;
+  opacity:0;animation:rise 1.2s .5s forwards
+}
+.hero h1{
+  font-size:clamp(33px,7.6vw,72px);line-height:1.42;letter-spacing:.13em;
+  font-weight:200;margin:0 0 26px
+}
+.hero h1 span{display:block;opacity:0;animation:rise 1.4s forwards}
+.hero h1 span:nth-child(1){animation-delay:.7s}
+.hero h1 span:nth-child(2){animation-delay:.86s}
+.hero h1 i{font-family:var(--latin);font-style:italic;font-weight:300;color:var(--coffee);padding:0 .1em}
+.hero-sub{
+  font-size:14px;color:var(--ink2);letter-spacing:.1em;margin:0 0 30px;max-width:30ch;
+  opacity:0;animation:rise 1.2s 1.05s forwards
+}
+.hero-meta{
+  display:flex;flex-wrap:wrap;align-items:center;gap:8px 22px;
+  font-size:11.5px;letter-spacing:.24em;color:var(--ink2);
+  opacity:0;animation:rise 1.2s 1.2s forwards
+}
+.hero-meta b{font-family:var(--latin);font-size:17px;letter-spacing:.1em;font-weight:400;color:var(--ink)}
+.hero-meta s{text-decoration:none;color:var(--coffee);opacity:.5}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+
+/* ═ statement ═ */
+.stmt{padding:clamp(72px,12vw,150px) 0 clamp(64px,10vw,130px);text-align:center}
+.stmt h2{
+  font-size:clamp(20px,4vw,33px);line-height:1.95;letter-spacing:.12em;
+  font-weight:200;margin:0 auto 34px;max-width:26ch
+}
+.stmt h2 b{font-weight:300;color:var(--coffee)}
+.stmt p{margin:0 auto;max-width:40ch;color:var(--ink2);font-size:14px;line-height:2.1}
+.mark{
+  width:1px;height:clamp(46px,7vw,86px);background:var(--hair);
+  margin:0 auto clamp(34px,5vw,54px)
+}
+
+/* ═ quiz card ═ */
+.quiz{
+  background:var(--white);margin-top:clamp(34px,5vw,48px);
+  box-shadow:0 26px 60px -46px rgba(44,44,44,.5);max-width:660px
+}
+.quiz-hd{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:22px clamp(22px,3.4vw,34px);border-bottom:1px solid var(--hair);
+  font-size:11px;letter-spacing:.24em;color:var(--ink2)
+}
+.quiz-c b{font-family:var(--latin);font-size:19px;font-weight:400;color:var(--coffee);letter-spacing:.04em}
+.quiz-bar{height:2px;background:var(--clay)}
+.quiz-bar i{display:block;height:100%;width:0;background:var(--coffee);transition:width .5s cubic-bezier(.16,.7,.3,1)}
+.pains{padding:6px clamp(22px,3.4vw,34px) 14px}
+.pain{
+  display:flex;align-items:center;gap:15px;width:100%;text-align:left;
+  padding:15px 0;border-bottom:1px solid var(--hair);
+  font-size:15px;letter-spacing:.05em;line-height:1.75;color:var(--ink2);transition:color .3s
+}
+.pains .pain:last-child{border-bottom:0}
+.pain .bx{
+  width:21px;height:21px;flex:none;border:1px solid #BDB6AA;background:#fff;
+  display:grid;place-items:center;transition:.28s
+}
+.pain .bx::after{
+  content:"";width:10px;height:5px;border-left:1.6px solid #fff;border-bottom:1.6px solid #fff;
+  transform:rotate(-45deg) scale(0);transition:transform .28s;margin-top:-3px
+}
+.pain:hover .bx{border-color:var(--coffee)}
+.pain.on{color:var(--ink)}
+.pain.on .bx{background:var(--coffee);border-color:var(--coffee)}
+.pain.on .bx::after{transform:rotate(-45deg) scale(1)}
+.quiz-ft{
+  background:var(--bone);border-top:1px solid var(--hair);
+  padding:clamp(24px,3.6vw,34px);position:relative
+}
+.quiz-ft::before{content:"";position:absolute;left:0;top:-1px;width:52px;height:2px;background:var(--coffee)}
+.quiz-r{
+  font-family:var(--serif);font-weight:300;font-size:clamp(17px,3.6vw,21px);
+  letter-spacing:.1em;margin:0 0 12px;line-height:1.7
+}
+.quiz-b{margin:0;font-size:14px;line-height:2.05;color:var(--ink2);min-height:5.4em}
+.quiz-go{display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;margin-top:24px}
+.qbtn{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:14px 30px;background:var(--coffee);color:#FAF7F3;
+  font-size:12px;letter-spacing:.22em;transition:.3s
+}
+.qbtn:hover{background:var(--dark)}
+.qbtn.ghost{background:transparent;color:var(--ink2);padding:14px 0;border-bottom:1px solid var(--hair)}
+.qbtn.ghost:hover{color:var(--ink);border-color:var(--ink)}
+@media(max-width:640px){.quiz-go{display:grid;grid-template-columns:1fr;gap:4px}.qbtn{width:100%}.qbtn.ghost{padding:14px}}
+
+/* ═ curriculum ═ */
+.steps{margin-top:clamp(40px,6vw,64px)}
+.step{border-top:1px solid rgba(237,236,234,.15)}
+.step:last-child{border-bottom:1px solid rgba(237,236,234,.15)}
+.step-hd{
+  width:100%;display:flex;align-items:flex-start;gap:clamp(16px,4vw,40px);
+  padding:clamp(24px,4vw,36px) 0;text-align:left
+}
+.step-n{
+  font-family:var(--latin);font-size:clamp(20px,3vw,28px);font-weight:300;
+  color:rgba(237,236,234,.32);flex:none;transition:color .5s;letter-spacing:.04em;
+  line-height:1;margin-top:22px
+}
+.step.on .step-n{color:#C0A480}
+.step-main{flex:1;display:block}
+.step-cat{
+  display:block;font-size:10px;letter-spacing:.3em;color:#C0A480;
+  margin-bottom:10px;font-family:var(--sans)
+}
+.step-t{
+  display:block;font-family:var(--serif);font-weight:200;
+  font-size:clamp(18px,4.2vw,28px);letter-spacing:.1em;line-height:1.55
+}
+.step-d{
+  display:block;font-size:13px;letter-spacing:.06em;line-height:1.85;
+  color:rgba(237,236,234,.5);margin-top:10px
+}
+.step.on .step-d{display:none}
+.step-x{position:relative;width:13px;height:13px;flex:none;opacity:.55;margin-top:26px}
+.step-x::before,.step-x::after{content:"";position:absolute;background:currentColor;transition:transform .45s}
+.step-x::before{top:6px;left:0;width:13px;height:1px}
+.step-x::after{left:6px;top:0;width:1px;height:13px}
+.step.on .step-x::after{transform:scaleY(0)}
+.step-body{max-height:0;overflow:hidden;transition:max-height .6s cubic-bezier(.16,.7,.3,1)}
+.step-in{padding:0 0 clamp(30px,5vw,46px) 0;max-width:640px}
+.step-in p{margin:0 0 24px;color:rgba(237,236,234,.62);font-size:14.5px;line-height:2.1}
+.tags{margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px 26px}
+.tags li{
+  list-style:none;font-size:13px;letter-spacing:.08em;
+  color:rgba(237,236,234,.8);position:relative;padding-left:14px
+}
+.tags li::before{content:"";position:absolute;left:0;top:.95em;width:5px;height:1px;background:#C0A480}
+.step-q{
+  margin:30px 0 0;font-family:var(--serif);font-weight:200;
+  font-size:clamp(16px,3.6vw,21px);letter-spacing:.1em;color:#D0B392;line-height:1.8
+}
+
+.sub-title{
+  font-size:12.5px;letter-spacing:.2em;color:#C0A480;margin:-14px 0 24px;
+  padding-bottom:22px;border-bottom:1px solid rgba(237,236,234,.15);max-width:44ch
+}
+
+/* ═ curriculum layout + iphone ═ */
+.flow2{
+  display:grid;grid-template-columns:clamp(250px,25vw,300px) 1fr;
+  gap:clamp(30px,5vw,70px);align-items:start;margin-top:clamp(40px,6vw,64px)
+}
+.flow2 .steps{margin-top:0}
+.phone-col{position:sticky;top:96px}
+.iphone{
+  width:100%;padding:9px;border-radius:44px;
+  background:linear-gradient(150deg,#5A5148,#332D27 42%,#4A423A);
+  box-shadow:0 40px 70px -40px rgba(0,0,0,.85),0 0 0 1px rgba(237,236,234,.09)
+}
+.ip-body{position:relative;border-radius:36px;overflow:hidden;background:var(--white)}
+.ip-island{
+  position:absolute;top:9px;left:50%;transform:translateX(-50%);
+  width:30%;height:19px;background:#15120F;border-radius:20px;z-index:6
+}
+.ip-screen{position:relative;aspect-ratio:9/19.2;overflow:hidden;background:var(--white)}
+.scr{
+  position:absolute;inset:0;opacity:0;transform:translateY(10px) scale(.99);
+  pointer-events:none;transition:opacity .55s ease,transform .55s cubic-bezier(.16,.7,.3,1);
+  display:flex;flex-direction:column;color:var(--ink);
+  font-size:8.5px;line-height:1.65;letter-spacing:.02em
+}
+.scr.on{opacity:1;transform:none;pointer-events:auto}
+.ip-cap{
+  margin:20px 0 0;text-align:center;font-size:10px;letter-spacing:.26em;
+  color:rgba(237,236,234,.45);transition:opacity .4s
+}
+
+/* screen chrome */
+.s-bar{
+  padding:34px 14px 10px;font-size:9px;letter-spacing:.14em;
+  display:flex;align-items:center;justify-content:space-between;
+  border-bottom:1px solid var(--hair);flex:none
+}
+.s-bar b{font-weight:400;letter-spacing:.1em}
+.s-bar i{font-style:normal;color:var(--coffee);font-size:8px;letter-spacing:.2em}
+.s-in{flex:1;overflow:hidden;padding:12px 14px}
+
+/* 1 profile */
+.pf{display:flex;gap:12px;align-items:center;margin-bottom:10px}
+.pf-av{
+  width:44px;height:44px;border-radius:50%;flex:none;background:var(--coffee);
+  color:var(--white);display:grid;place-items:center;font-family:var(--serif);font-size:16px
+}
+.pf-st{display:flex;gap:11px;font-size:7.5px;color:var(--ink2)}
+.pf-st b{display:block;font-size:11px;color:var(--ink);font-family:var(--latin);font-weight:400}
+.pf-bio{font-size:8px;color:var(--ink2);margin-bottom:8px;line-height:1.8}
+.chips{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:11px}
+.chips span{
+  font-size:7px;letter-spacing:.1em;padding:3px 7px;
+  border:1px solid var(--hair);border-radius:999px;color:var(--coffee)
+}
+.mini9{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.mini9 img{width:100%;aspect-ratio:1;object-fit:cover}
+
+/* 2 pillars */
+.pil{margin-bottom:11px}
+.pil-h{display:flex;justify-content:space-between;font-size:8px;margin-bottom:5px}
+.pil-h em{font-style:normal;color:var(--ink2);font-family:var(--latin);letter-spacing:.1em}
+.pil-b{height:3px;background:var(--clay)}
+.pil-b i{display:block;height:100%;background:var(--coffee)}
+
+/* 3 chat */
+.cb{
+  max-width:84%;padding:8px 11px;margin-bottom:8px;font-size:8px;line-height:1.85;
+  border-radius:12px
+}
+.cb.me{margin-left:auto;background:var(--ink);color:var(--bone);border-bottom-right-radius:3px}
+.cb.ai{background:var(--bone);border-bottom-left-radius:3px}
+.cb.ai b{display:block;color:var(--coffee);font-weight:400;margin-bottom:4px;font-size:7.5px;letter-spacing:.16em}
+
+/* 4 camera */
+.cam{position:relative;flex:1;background:#000;overflow:hidden}
+.cam img{width:100%;height:100%;object-fit:cover}
+.cam-g{position:absolute;inset:0}
+.cam-g::before,.cam-g::after{
+  content:"";position:absolute;background:rgba(255,255,255,.28)
+}
+.cam-g::before{left:33.3%;right:33.3%;top:0;bottom:0;border-left:1px solid rgba(255,255,255,.28);border-right:1px solid rgba(255,255,255,.28)}
+.cam-g::after{top:33.3%;bottom:33.3%;left:0;right:0;background:none;border-top:1px solid rgba(255,255,255,.28);border-bottom:1px solid rgba(255,255,255,.28)}
+.cam-f{
+  position:absolute;left:46%;top:38%;width:46px;height:46px;
+  border:1px solid #F5C86A;animation:pulse 2.4s infinite
+}
+.cam-f span{position:absolute;left:50%;bottom:-16px;transform:translateX(-50%);color:#F5C86A;font-size:7px;letter-spacing:.1em;white-space:nowrap}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.42}}
+.cam-z{
+  position:absolute;left:0;right:0;bottom:56px;display:flex;justify-content:center;gap:10px
+}
+.cam-z span{
+  width:20px;height:20px;border-radius:50%;background:rgba(0,0,0,.42);color:#fff;
+  font-size:7px;display:grid;place-items:center
+}
+.cam-z span.on{background:rgba(0,0,0,.6);color:#F5C86A}
+.cam-s{
+  position:absolute;left:50%;bottom:14px;transform:translateX(-50%);
+  width:34px;height:34px;border-radius:50%;background:#fff;
+  box-shadow:0 0 0 2px rgba(255,255,255,.4)
+}
+
+/* 5 edit */
+.ed{
+  position:relative;height:44%;flex:none;overflow:hidden;background:var(--clay);
+  --sp:52%;touch-action:none;cursor:ew-resize;user-select:none
+}
+.ed img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ed img.b{clip-path:inset(0 0 0 var(--sp));filter:saturate(.86) contrast(1.03) brightness(1.03) sepia(.06)}
+.ed img.a{filter:saturate(1.45) hue-rotate(-14deg) contrast(1.1)}
+.ed-l{position:absolute;top:0;bottom:0;left:var(--sp);width:1px;background:rgba(255,255,255,.9)}
+.ed-h{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:22px;height:22px;border-radius:50%;background:rgba(255,255,255,.94);
+  color:var(--ink);font-size:8px;letter-spacing:-.02em;
+  display:grid;place-items:center;box-shadow:0 2px 8px rgba(0,0,0,.35)
+}
+.ed-tip{
+  position:absolute;top:8px;left:50%;transform:translateX(-50%);
+  font-size:7px;letter-spacing:.24em;color:#fff;background:rgba(0,0,0,.42);
+  padding:3px 9px;border-radius:999px;transition:opacity .5s
+}
+.ed-t{
+  position:absolute;bottom:7px;font-size:7px;letter-spacing:.14em;color:#fff;
+  text-shadow:0 1px 4px rgba(0,0,0,.6)
+}
+.ed-t.l{left:8px}.ed-t.r{right:8px}
+.sld{margin-bottom:13px}
+.sld-h{display:flex;justify-content:space-between;font-size:8px;margin-bottom:6px}
+.sld-h em{font-style:normal;color:var(--coffee);font-family:var(--latin);letter-spacing:.08em}
+.sld-t{height:1px;background:var(--clay);position:relative}
+.sld-t i{position:absolute;top:-3px;width:7px;height:7px;border-radius:50%;background:var(--coffee)}
+.saved{
+  margin-top:14px;padding-top:11px;border-top:1px solid var(--hair);
+  font-size:7.5px;letter-spacing:.2em;color:var(--coffee);text-align:center
+}
+
+@media(max-width:900px){
+  .flow2{grid-template-columns:1fr;gap:0}
+  .phone-col{
+    position:sticky;top:0;z-index:8;
+    background:var(--dark);padding:14px 0 16px;
+    margin:0 calc(var(--pad)*-1);
+    box-shadow:0 18px 26px -22px rgba(0,0,0,.9)
+  }
+  .iphone{
+    width:clamp(126px,33vw,152px);margin:0 auto;padding:5px;border-radius:26px;
+    opacity:1!important;transform:none!important
+  }
+  .ip-body{border-radius:21px}
+  .ip-island{height:12px;top:5px}
+  .ip-cap{margin-top:11px;font-size:9px;letter-spacing:.2em}
+  .steps{margin-top:6px}
+  .scr{font-size:7px}
+  .s-bar{padding:22px 9px 7px;font-size:7.5px}
+  .s-in{padding:8px 9px}
+  .pf-av{width:32px;height:32px;font-size:12px}
+  .cb{font-size:7px;padding:6px 8px}
+  .cam-s{width:24px;height:24px;bottom:9px}
+  .cam-z{bottom:39px}
+  .cam-f{width:32px;height:32px}
+}
+
+/* ═ works ═ */
+.works{padding:var(--gap) 0 clamp(46px,7vw,72px)}
+.strip{
+  display:flex;gap:clamp(10px,1.6vw,20px);margin-top:clamp(38px,5vw,56px);
+  padding:0 var(--pad) 8px;overflow-x:auto;
+  scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none
+}
+.strip::-webkit-scrollbar{display:none}
+.shot{
+  flex:0 0 clamp(230px,66vw,330px);scroll-snap-align:center;text-align:left
+}
+.shot-f{position:relative;overflow:hidden;background:rgba(237,236,234,.07)}
+.shot img{width:100%;aspect-ratio:3/4;object-fit:cover;transition:transform 1s cubic-bezier(.16,.7,.3,1);opacity:0}
+.shot img.on{opacity:1;transition:opacity 1s ease,transform 1s cubic-bezier(.16,.7,.3,1)}
+.shot:hover img{transform:scale(1.04)}
+.shot-c{
+  display:flex;gap:12px;align-items:baseline;
+  margin-top:14px;font-size:11.5px;letter-spacing:.2em;color:rgba(237,236,234,.6)
+}
+.shot-c b{font-family:var(--latin);font-size:12px;font-weight:400;color:rgba(237,236,234,.32)}
+.hint{
+  margin:clamp(26px,4vw,38px) 0 0;font-size:11px;letter-spacing:.26em;
+  color:rgba(237,236,234,.45)
+}
+
+/* lightbox */
+.lb{
+  position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;
+  gap:clamp(20px,4vw,60px);padding:clamp(20px,5vw,64px);
+  background:rgba(20,17,15,.96);backdrop-filter:blur(8px);
+  opacity:0;pointer-events:none;transition:opacity .4s
+}
+.lb.show{opacity:1;pointer-events:auto}
+.lb img{max-height:74vh;max-width:min(44vw,440px);object-fit:contain}
+.lb-p{max-width:330px;color:var(--bone)}
+.lb-n{font-family:var(--latin);font-size:13px;letter-spacing:.24em;color:rgba(237,236,234,.4)}
+.lb-t{
+  font-family:var(--serif);font-weight:200;font-size:clamp(20px,2.6vw,27px);
+  letter-spacing:.1em;line-height:1.7;margin:16px 0
+}
+.lb-b{font-size:14px;line-height:2.1;color:rgba(237,236,234,.7);margin:0 0 30px}
+.lb-nav{display:flex;gap:26px;font-size:11.5px;letter-spacing:.24em}
+.lb-nav button{padding:10px 0;border-bottom:1px solid rgba(237,236,234,.3);transition:.3s}
+.lb-nav button:hover{border-color:var(--bone)}
+.lb-x{
+  position:absolute;top:20px;right:20px;width:44px;height:44px;
+  font-size:17px;color:rgba(237,236,234,.7);transition:.3s
+}
+.lb-x:hover{color:var(--bone)}
+
+/* ═ feed before / after ═ */
+.feed-wrap{
+  display:grid;grid-template-columns:1fr .92fr;
+  gap:clamp(34px,6vw,80px);align-items:center;margin-top:clamp(30px,4vw,40px)
+}
+.grid9{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}
+.g9{position:relative;aspect-ratio:1;overflow:hidden;background:var(--clay)}
+.g9 img{
+  width:100%;height:100%;object-fit:cover;opacity:0;
+  transition:filter 1.1s ease,opacity 1s ease,transform 1.1s ease
+}
+.g9 img.on{opacity:1}
+.swap{
+  display:inline-flex;align-items:center;gap:0;margin-top:26px;
+  border-bottom:1px solid var(--hair)
+}
+.swap button{
+  padding:13px 20px;font-size:11.5px;letter-spacing:.22em;color:var(--ink2);
+  position:relative;transition:color .4s
+}
+.swap button[aria-pressed="true"]{color:var(--ink)}
+.swap button[aria-pressed="true"]::after{
+  content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;background:var(--coffee)
+}
+.feed-note{margin:18px 0 0;font-size:12px;letter-spacing:.14em;color:var(--ink2)}
+
+/* ═ planner ═ */
+.pick{display:flex;flex-wrap:wrap;gap:clamp(26px,5vw,60px);margin-top:clamp(34px,5vw,50px)}
+.pick-q{font-size:10.5px;letter-spacing:.28em;color:var(--ink2);margin:0 0 15px}
+.pick-q em{font-style:normal;color:var(--coffee);letter-spacing:.2em}
+.opts{display:flex;flex-wrap:wrap;gap:9px}
+.opt{
+  font-size:13.5px;letter-spacing:.1em;color:var(--ink2);
+  padding:11px 20px;border:1px solid #B9B2A6;background:transparent;
+  border-radius:999px;transition:.3s
+}
+.opt:hover{border-color:var(--ink);color:var(--ink)}
+.opt[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--bone)}
+.week{
+  display:flex;gap:clamp(10px,1.4vw,16px);margin-top:clamp(36px,5vw,52px);
+  overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px;scrollbar-width:none
+}
+.week::-webkit-scrollbar{display:none}
+.dayc{
+  flex:0 0 clamp(200px,62vw,215px);scroll-snap-align:start;
+  background:var(--white);padding:24px 22px 26px;
+  opacity:0;transform:translateY(12px);animation:pop .6s forwards
+}
+@keyframes pop{to{opacity:1;transform:none}}
+.dayc h4{
+  font-family:var(--latin);font-size:12px;font-weight:400;letter-spacing:.24em;
+  color:var(--ink2);margin:0 0 18px
+}
+.dayc .kind{
+  font-family:var(--serif);font-weight:300;font-size:15px;
+  letter-spacing:.16em;color:var(--coffee);margin:0 0 12px
+}
+.dayc p{margin:0;font-size:13.5px;line-height:1.95;color:var(--ink)}
+.wk-foot{margin:clamp(26px,4vw,36px) 0 0;font-size:12px;color:var(--ink2);letter-spacing:.08em;max-width:48ch}
+
+/* ═ teachers ═ */
+.tea{display:grid;grid-template-columns:1fr 1fr}
+.tcard{position:relative;overflow:hidden}
+.tcard img{width:100%;height:clamp(340px,44vw,560px);object-fit:cover;opacity:0;transition:opacity 1.2s}
+.tcard img.on{opacity:1}
+.tbody{padding:clamp(34px,4.5vw,54px) clamp(26px,4vw,52px) clamp(44px,6vw,64px)}
+.tname{
+  font-family:var(--serif);font-weight:200;font-size:clamp(23px,4vw,32px);
+  letter-spacing:.14em;margin:0 0 12px
+}
+.trole{font-size:10.5px;letter-spacing:.32em;color:var(--coffee);margin:0 0 26px}
+.tbody p{margin:0 0 26px;font-size:14.5px;line-height:2.1;color:var(--ink2)}
+.tlist{margin:0;padding:0}
+.tlist li{
+  list-style:none;font-size:13.5px;letter-spacing:.06em;padding:10px 0;
+  border-top:1px solid var(--hair);color:var(--ink)
+}
+
+/* ═ takeaway ═ */
+.take{margin:clamp(40px,6vw,60px) 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0 clamp(30px,5vw,70px)}
+.take li{
+  list-style:none;display:flex;gap:18px;align-items:baseline;
+  padding:19px 0;border-bottom:1px solid rgba(237,236,234,.13)
+}
+.take b{
+  font-family:var(--latin);font-size:12px;font-weight:400;letter-spacing:.2em;
+  color:rgba(237,236,234,.35);flex:none
+}
+.take span{font-family:var(--serif);font-weight:200;font-size:clamp(15px,3.4vw,19px);letter-spacing:.1em}
+
+/* ═ enroll ═ */
+.sess{margin:clamp(34px,5vw,48px) 0 0;display:grid;gap:0}
+.sbtn{
+  width:100%;display:flex;align-items:center;gap:20px;text-align:left;
+  padding:clamp(22px,3.4vw,30px) 0;border-top:1px solid var(--hair);transition:.4s
+}
+.sess .sbtn:last-child{border-bottom:1px solid var(--hair)}
+.sdot{width:7px;height:7px;border-radius:50%;flex:none;box-shadow:inset 0 0 0 1px var(--hair);transition:.4s}
+.sbtn[aria-pressed="true"] .sdot{background:var(--coffee);box-shadow:none}
+.sd{font-family:var(--latin);font-size:clamp(23px,4vw,30px);font-weight:300;letter-spacing:.1em}
+.sm{font-size:11px;letter-spacing:.24em;color:var(--ink2);margin-top:6px}
+.sbtn span.city{margin-left:auto;font-size:10.5px;letter-spacing:.3em;color:var(--ink2)}
+.sbtn[aria-pressed="true"] span.city{color:var(--coffee)}
+
+.price{
+  background:var(--coffee);color:#FAF7F3;
+  padding:clamp(34px,5vw,54px);margin-top:clamp(34px,5vw,48px)
+}
+.price-l{font-size:10.5px;letter-spacing:.32em;opacity:.72}
+.price-n{
+  font-family:var(--latin);font-size:clamp(50px,10vw,78px);font-weight:300;
+  line-height:1;letter-spacing:.02em;margin:18px 0 10px
+}
+.price-n s{text-decoration:none;font-size:.28em;opacity:.7;margin-right:8px}
+.price p{margin:0 0 30px;font-size:13.5px;opacity:.8;letter-spacing:.06em}
+.pinfo{margin:0 0 28px;padding:0;list-style:none}
+.pinfo li{
+  display:flex;gap:20px;align-items:baseline;
+  padding:13px 0;border-top:1px solid rgba(250,247,243,.24);
+  font-size:12.5px;letter-spacing:.1em
+}
+.pinfo li:last-child{border-bottom:1px solid rgba(250,247,243,.24)}
+.pinfo span{flex:none;opacity:.72}
+.pinfo b{font-weight:400;margin-left:auto;text-align:right}
+.pinfo em{display:block;font-style:normal;font-size:10px;letter-spacing:.16em;opacity:.65;margin-top:4px}
+.said{
+  border-top:1px solid rgba(250,247,243,.28);
+  border-bottom:1px solid rgba(250,247,243,.28);
+  padding:20px 0;margin:0 0 28px
+}
+.said em{display:block;font-style:normal;font-size:10.5px;letter-spacing:.28em;opacity:.7;margin-bottom:12px}
+.said p{margin:0;font-family:var(--serif);font-weight:300;font-size:16px;letter-spacing:.08em;opacity:1}
+.acts{display:flex;flex-wrap:wrap;gap:14px 30px;align-items:center}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:16px 36px;background:#FAF7F3;color:var(--coffee);
+  font-size:12.5px;letter-spacing:.24em;transition:.35s
+}
+.btn:hover{background:#fff}
+.btn-line{
+  padding:16px 0;border-bottom:1px solid rgba(250,247,243,.45);
+  font-size:12px;letter-spacing:.24em;color:#FAF7F3;transition:.35s
+}
+.btn-line:hover{border-color:#FAF7F3}
+.howto{margin-top:clamp(40px,6vw,60px);max-width:520px}
+.howto-h{font-size:10.5px;letter-spacing:.32em;color:var(--coffee);margin:0 0 26px}
+.howto-l{list-style:none;margin:0;padding:0;position:relative}
+.howto-l::before{
+  content:"";position:absolute;left:11px;top:14px;bottom:22px;
+  width:1px;background:var(--hair)
+}
+.howto-l li{position:relative;display:flex;gap:20px;align-items:flex-start;padding:0 0 26px}
+.howto-l li:last-child{padding-bottom:0}
+.howto-l b{
+  position:relative;z-index:2;flex:none;width:23px;height:23px;border-radius:50%;
+  background:var(--bone);box-shadow:inset 0 0 0 1px var(--hair);
+  display:grid;place-items:center;font-family:var(--latin);font-size:10px;
+  font-weight:400;letter-spacing:.04em;color:var(--ink2);margin-top:1px
+}
+.howto-l li:last-child b{background:var(--coffee);box-shadow:none;color:#FAF7F3}
+.howto-l span{font-size:14.5px;letter-spacing:.06em;line-height:1.75}
+.howto-l em{
+  display:block;font-style:normal;font-size:12px;letter-spacing:.04em;
+  color:var(--coffee);margin-top:7px;line-height:1.8
+}
+.bonus{margin-top:clamp(40px,6vw,60px);max-width:52ch}
+.bonus h3{font-family:var(--serif);font-weight:200;font-size:clamp(18px,3.4vw,23px);letter-spacing:.12em;margin:0 0 16px}
+.bonus p{margin:0;color:var(--ink2);font-size:14.5px}
+
+/* ═ faq ═ */
+.faq{margin-top:clamp(36px,5vw,52px)}
+.fq{border-top:1px solid var(--hair)}
+.faq .fq:last-child{border-bottom:1px solid var(--hair)}
+.fq-hd{
+  width:100%;display:flex;align-items:center;gap:20px;text-align:left;
+  padding:22px 0;font-size:15px;letter-spacing:.06em;font-family:var(--serif);font-weight:300
+}
+.fq-s{margin-left:auto;font-family:var(--latin);font-size:19px;color:var(--coffee);transition:transform .4s}
+.fq.on .fq-s{transform:rotate(45deg)}
+.fq-b{max-height:0;overflow:hidden;transition:max-height .55s cubic-bezier(.16,.7,.3,1)}
+.fq-b p{margin:0 0 26px;color:var(--ink2);font-size:14.5px;max-width:56ch}
+
+/* ═ closing ═ */
+.close{position:relative;min-height:min(96svh,760px);display:flex;align-items:flex-end;overflow:hidden}
+.close img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 28%;opacity:0;transition:opacity 1.4s}
+.close img.on{opacity:1}
+.close::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(29,25,22,.9) 0%,rgba(29,25,22,.62) 38%,rgba(29,25,22,.12) 78%)
+}
+.close-in{position:relative;z-index:2;width:100%;padding:0 var(--pad) clamp(64px,10vw,110px);max-width:var(--maxw);margin:0 auto;color:var(--bone)}
+.close h2{
+  font-size:clamp(25px,5.6vw,50px);line-height:1.75;letter-spacing:.12em;
+  margin:0 0 30px;max-width:18ch
+}
+.close h2 b{font-weight:300;color:#E2CBAB}
+.close p{color:rgba(237,236,234,.72);max-width:36ch;margin:0 0 40px;font-size:14.5px}
+.close .btn{background:var(--bone);color:var(--dark)}
+
+footer{
+  padding:44px 0 calc(44px + env(safe-area-inset-bottom));text-align:center;
+  font-size:10.5px;letter-spacing:.3em;color:var(--ink2);background:var(--bone)
+}
+
+/* ═ dock ═ */
+.dock{
+  position:fixed;left:0;right:0;bottom:0;z-index:70;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:12px var(--pad) calc(12px + env(safe-area-inset-bottom));
+  background:rgba(237,236,234,.95);backdrop-filter:blur(14px);
+  border-top:1px solid var(--hair);
+  transform:translateY(115%);transition:transform .55s cubic-bezier(.16,.7,.3,1)
+}
+.dock.show{transform:none}
+.dock-p{font-family:var(--latin);font-size:20px;font-weight:400;letter-spacing:.06em;line-height:1.3}
+.dock-s{font-size:9.5px;letter-spacing:.22em;color:var(--ink2)}
+.dock .btn{background:var(--coffee);color:#FAF7F3;padding:14px 26px;font-size:11.5px}
+.dock .btn:hover{background:var(--dark)}
+
+
+/* ═ responsive ═ */
+@media(max-width:900px){
+  .feed-wrap{grid-template-columns:1fr;gap:34px}
+  .tea{grid-template-columns:1fr}
+  .tcard img{height:clamp(300px,72vw,440px)}
+  .take{grid-template-columns:1fr}
+  .lb{flex-direction:column;justify-content:flex-start;overflow-y:auto;padding-top:76px;gap:22px}
+  .lb img{max-height:46vh;max-width:100%}
+  .lb-p{max-width:none;width:100%}
+  .lb-nav{display:grid;grid-template-columns:1fr 1fr;gap:0}
+  .lb-nav button{padding:14px 0}
+}
+@media(max-width:640px){
+  body{font-size:14.5px;line-height:2}
+  .hero-meta{gap:6px 16px;font-size:10.5px;letter-spacing:.18em}
+  .hero-meta b{font-size:15px}
+  .nb-1{font-size:8px;letter-spacing:.22em}
+  .nb-2{font-size:11px;letter-spacing:.04em;margin-top:2px}
+  .nav{padding:11px var(--pad);gap:14px}
+  .nav-cta{flex:none;font-size:10px;letter-spacing:.2em}
+  .step-t{letter-spacing:.06em}
+  .pain{gap:14px}
+  .acts{display:grid;grid-template-columns:1fr;gap:6px}
+  .btn{width:100%;padding:17px}
+  .btn-line{text-align:center;width:100%}
+  .price{margin-left:calc(var(--pad)*-1);margin-right:calc(var(--pad)*-1);padding:38px var(--pad)}
+  .dock-p{font-size:18px}
+  .dock .btn{width:auto;padding:13px 22px}
+  footer{padding-bottom:calc(96px + env(safe-area-inset-bottom))}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation-duration:.01ms!important;transition-duration:.01ms!important}
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none}
+  .hero-kick,.hero h1 span,.hero-sub,.hero-meta{opacity:1;animation:none}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-brand">
+    <span class="nb-1">LERESA 椛 × RURU</span>
+    <span class="nb-2">IG 品牌經營 × 手機攝影實戰班</span>
+  </div>
+  <a class="nav-cta" href="#enroll">報名</a>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero" data-nav="photo">
+  <div class="hero-media"><img id="heroImg" alt="手機拍攝的睫毛作品特寫"></div>
+  <div class="hero-copy">
+    <p class="hero-kick">LERESA 椛 × RURU</p>
+    <h1><span>IG 品牌經營 <i>×</i></span><span>手機攝影實戰班</span></h1>
+    <p class="hero-sub">美容工作者的一日實戰課</p>
+    <div class="hero-meta">
+      <span>2026</span><b>09.16</b><s>／</s><b>10.14</b>
+      <span>台北</span><span>09:30 – 18:30</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ STATEMENT ═══ -->
+<section class="stmt" data-nav="light">
+  <div class="wrap">
+    <div class="mark rv"></div>
+    <h2 class="rv">妳缺的可能不是作品<br><b>而是讓作品被看見的方法</b></h2>
+    <p class="rv">這次我們把原本的攝影課全面升級。不只教妳怎麼拍漂亮，而是把品牌經營、內容企劃、AI 與手機攝影全部串在一起，用一天的時間建立屬於自己的品牌內容系統。</p>
+  </div>
+</section>
+
+<!-- ═══ SELF CHECK ═══ -->
+<section class="sec" id="check" data-nav="light">
+  <div class="wrap">
+    <p class="label rv">小測驗</p>
+    <h2 class="rv">30 秒<br>看看這堂課適不適合妳</h2>
+    <p class="lead rv">下面九個狀況，勾選符合妳現在情形的。勾完下方會直接告訴妳結果。</p>
+
+    <div class="quiz rv">
+      <div class="quiz-hd">
+        <span>勾選符合妳的狀況</span>
+        <span class="quiz-c"><b id="tn">0</b> ／ 9</span>
+      </div>
+      <div class="quiz-bar"><i id="qbar"></i></div>
+      <div class="pains" id="pains"></div>
+      <div class="quiz-ft">
+        <p class="quiz-r" id="tt">先勾選看看</p>
+        <p class="quiz-b" id="tb">每一項都對應課程當天的一個環節。勾完之後這裡會告訴妳，這堂課能替妳解決哪個部分。</p>
+        <div class="quiz-go" id="quizGo">
+          <a class="qbtn" href="#steps">看課程內容</a>
+          <a class="qbtn ghost" href="#enroll">直接看報名資訊</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CURRICULUM ═══ -->
+<section class="sec dark" id="steps" data-nav="dark">
+  <div class="wrap">
+    <p class="label rv">課程內容</p>
+    <h2 class="rv">《IG 品牌經營<br>× 手機攝影實戰班》</h2>
+    <p class="sub-title rv">Leresa 椛 × RuRu｜聯名雙講師課程</p>
+    <p class="lead rv">一日完整課程，09:30 – 18:30。內容從品牌定位、IG 內容企劃、AI 應用、手機攝影，一路到修圖與實際執行，分成五個階段循序進行。</p>
+    <p class="lead rv" style="margin-top:20px">下面點開任何一個階段，左邊的手機就會顯示那個階段完成後的畫面。</p>
+    <div class="flow2">
+      <div class="phone-col">
+        <div class="iphone rv" id="phone">
+          <div class="ip-body">
+            <div class="ip-island"></div>
+            <div class="ip-screen" id="screens"></div>
+          </div>
+        </div>
+        <p class="ip-cap" id="ipCap">品牌定位　IG 帳號整體規劃</p>
+      </div>
+      <div class="steps rv" id="stepList"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WORKS ═══ -->
+<section class="works deep" data-nav="dark">
+  <div class="wrap">
+    <p class="label rv">作品</p>
+    <h2 class="rv">這些，都是<em>手機拍的</em></h2>
+    <p class="lead rv">沒有棚燈、沒有單眼。差別只在於知道光從哪裡來、前景放什麼、要引導對方看向哪裡。</p>
+  </div>
+  <div class="strip" id="strip"></div>
+  <div class="wrap"><p class="hint">點開任何一張，看它是怎麼拍出來的</p></div>
+</section>
+
+<!-- ═══ FEED ═══ -->
+<section class="sec" data-nav="light">
+  <div class="wrap">
+    <p class="label rv">品牌色調統一</p>
+    <h2 class="rv">同樣九張照片<br>色調統一之後</h2>
+
+    <div class="feed-wrap">
+      <div class="rv">
+        <p class="lead">版面沒有一致性，多半不是因為照片不好看，而是每一張的色溫、明暗、飽和度都不一樣。統一色調不需要換相機，只要一組固定的調整參數。</p>
+        <div class="swap" role="group" aria-label="色調對照">
+          <button type="button" id="bBefore" aria-pressed="true">調整前</button>
+          <button type="button" id="bAfter" aria-pressed="false">統一之後</button>
+        </div>
+        <p class="feed-note">課程 STEP 5 會帶妳建立自己的那一組參數</p>
+      </div>
+      <div class="grid9 rv" id="grid9"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PLANNER ═══ -->
+<section class="sec" style="background:var(--clay)" data-nav="light">
+  <div class="wrap">
+    <p class="label rv">課後成果</p>
+    <h2 class="rv">7 天內容計畫<br>長什麼樣子</h2>
+    <p class="lead rv">課程最後每個人都會完成一份自己的版本。先選兩個條件，看看它大概的樣子。</p>
+
+    <div class="pick rv">
+      <div>
+        <p class="pick-q">我的主要服務　<em>請點選</em></p>
+        <div class="opts" id="svc">
+          <button class="opt" type="button" data-v="美睫" aria-pressed="true">美睫</button>
+          <button class="opt" type="button" data-v="美甲" aria-pressed="false">美甲</button>
+          <button class="opt" type="button" data-v="紋繡" aria-pressed="false">紋繡</button>
+          <button class="opt" type="button" data-v="護膚" aria-pressed="false">護膚</button>
+          <button class="opt" type="button" data-v="教學" aria-pressed="false">教學招生</button>
+        </div>
+      </div>
+      <div>
+        <p class="pick-q">這 7 天我想做到　<em>請點選</em></p>
+        <div class="opts" id="goal">
+          <button class="opt" type="button" data-v="booking" aria-pressed="true">增加預約</button>
+          <button class="opt" type="button" data-v="trust" aria-pressed="false">建立專業信任</button>
+          <button class="opt" type="button" data-v="brand" aria-pressed="false">讓人記得我</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="week" id="week"></div>
+    <p class="wk-foot">這只是示意。課堂上會依照妳的品牌定位、內容支柱與當天拍到的素材，做出真正屬於妳的版本。</p>
+  </div>
+</section>
+
+<!-- ═══ TEACHERS ═══ -->
+<section class="sec" style="padding-bottom:0" data-nav="light">
+  <div class="wrap">
+    <p class="label rv">講師</p>
+    <h2 class="rv">兩個人，兩種專業</h2>
+  </div>
+  <div class="tea" style="margin-top:clamp(40px,6vw,64px)">
+    <div class="tcard rv">
+      <img id="imgL" alt="Leresa 椛">
+      <div class="tbody">
+        <h3 class="tname">Leresa 椛</h3>
+        <p class="trole">品牌經營 × 內容行銷</p>
+        <p>長期深耕美容產業與品牌經營，從技術服務、教育培訓到品牌代理，累積第一線實際經營經驗。課程中會從美容工作者真正會遇到的問題出發。</p>
+        <ul class="tlist">
+          <li>MOMIZI SALON 創辦人</li>
+          <li>韓國 OSHARE 台灣總代理・首席講師</li>
+          <li>日本 TABAJUKU 台灣首位代表</li>
+          <li>法國 YUMI 認證講師</li>
+          <li>INCA 世界賽國際評審</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tcard rv" style="background:var(--white)">
+      <img id="imgR" alt="RuRu">
+      <div class="tbody">
+        <h3 class="tname">RuRu</h3>
+        <p class="trole">手機攝影 × 品牌影像</p>
+        <p>擁有 10 年以上攝影經驗，擅長人像、品牌形象與商業影像拍攝。課程中會將多年攝影美感結合美容產業的實際需求。</p>
+        <ul class="tlist">
+          <li>10 年以上攝影資歷</li>
+          <li>人像・品牌形象・商業影像</li>
+          <li>手機設定與光線教學</li>
+          <li>構圖、引導與商品拍攝</li>
+          <li>修圖實作</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TAKEAWAY ═══ -->
+<section class="sec dark" data-nav="dark">
+  <div class="wrap">
+    <p class="label rv">帶得走的</p>
+    <h2 class="rv">課程當天<br>至少完成這 8 項</h2>
+    <ul class="take rv">
+      <li><b>01</b><span>自己的品牌定位</span></li>
+      <li><b>02</b><span>品牌視覺方向</span></li>
+      <li><b>03</b><span>3–5 個內容支柱</span></li>
+      <li><b>04</b><span>Reels／貼文題材庫</span></li>
+      <li><b>05</b><span>品牌形象與作品素材</span></li>
+      <li><b>06</b><span>手機修圖方式</span></li>
+      <li><b>07</b><span>可持續使用的 AI Prompt</span></li>
+      <li><b>08</b><span>7 天 IG 發文計畫</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══ ENROLL ═══ -->
+<section class="sec" id="enroll" data-nav="light">
+  <div class="wrap">
+    <p class="label rv">報名</p>
+    <h2 class="rv">選一個<br>妳可以來的日子</h2>
+    <p class="lead rv">2026 年台北場，每班限額，額滿即停止招生。詳細上課地點將於課前通知。</p>
+
+    <div class="sess rv" id="sess" role="group" aria-label="選擇場次">
+      <button class="sbtn" type="button" data-d="09/16" aria-pressed="true">
+        <span class="sdot"></span>
+        <span><span class="sd">09 / 16</span><span class="sm">星期三　09:30 – 18:30</span></span>
+        <span class="city">台北</span>
+      </button>
+      <button class="sbtn" type="button" data-d="10/14" aria-pressed="false">
+        <span class="sdot"></span>
+        <span><span class="sd">10 / 14</span><span class="sm">星期三　09:30 – 18:30</span></span>
+        <span class="city">台北</span>
+      </button>
+    </div>
+
+    <div class="price rv">
+      <p class="price-l">2026 全新改版首發價</p>
+      <div class="price-n"><s>NT$</s>6,500</div>
+      <p>單日完整課程・雙講師・含課後線上更新資料庫</p>
+
+      <ul class="pinfo">
+        <li><span>兩人同行</span><b>NT$12,000<em>每人 6,000・省 1,000</em></b></li>
+        <li><span>付款方式</span><b>轉帳／信用卡／中租分期</b></li>
+        <li><span>名　　額</span><b>每班限額・額滿即止</b></li>
+      </ul>
+
+      <div class="said">
+        <em>傳這句話給我就可以了</em>
+        <p id="msg">我要報名行銷攝影 2.0（09/16 台北場）</p>
+      </div>
+
+      <div class="acts">
+        <a class="btn" id="ctaMain" href="https://lin.ee/sIBZM7Y" target="_blank" rel="noopener">點選報名</a>
+      </div>
+    </div>
+
+    <div class="howto rv">
+      <p class="howto-h">報名方式</p>
+      <ol class="howto-l">
+        <li><b>01</b><span>點選報名</span></li>
+        <li><b>02</b><span>引導到 LINE 官方帳號</span></li>
+        <li><b>03</b><span>告知我要報名</span></li>
+        <li><b>04</b><span>繳交報名費用</span></li>
+        <li><b>05</b><span>填寫課前問卷<em>很重要，才能幫妳訂製 7 天發文計畫</em></span></li>
+        <li><b>06</b><span>完成</span></li>
+      </ol>
+    </div>
+
+    <div class="bonus rv">
+      <h3>加贈　課後線上更新資料庫</h3>
+      <p>IG、AI 與社群工具都會持續更新。實體課程結束後，與本課程相關的新增內容、工具應用與補充資訊，也會持續透過線上資料提供給學員 🤎 讓妳不是只學這一天。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section class="sec" style="padding-top:0" data-nav="light">
+  <div class="wrap">
+    <p class="label rv">報名前</p>
+    <h2 class="rv">常被問到的事</h2>
+    <div class="faq rv" id="faq"></div>
+  </div>
+</section>
+
+<!-- ═══ CLOSING ═══ -->
+<section class="close" data-nav="photo">
+  <img id="closeImg" alt="手機拍攝的品牌形象照">
+  <div class="close-in">
+    <h2>從「不知道要發什麼」<br><b>到讓內容替妳工作</b></h2>
+    <p>一天的時間，把品牌、內容與影像變成一套自己能用的系統。</p>
+    <a class="btn" href="https://lin.ee/sIBZM7Y" target="_blank" rel="noopener">我要報名行銷攝影 2.0</a>
+  </div>
+</section>
+
+<footer data-nav="light">MOMIZI SALON ／ LERESA 椛 × RURU ／ 2026</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="作品放大">
+  <button class="lb-x" id="lbX" aria-label="關閉">✕</button>
+  <img id="lbImg" alt="">
+  <div class="lb-p">
+    <p class="lb-n" id="lbN">01</p>
+    <h3 class="lb-t" id="lbT"></h3>
+    <p class="lb-b" id="lbB"></p>
+    <div class="lb-nav">
+      <button type="button" id="lbPrev">上一張</button>
+      <button type="button" id="lbNext">下一張</button>
+    </div>
+  </div>
+</div>
+
+<div class="dock" id="dock">
+  <div>
+    <div class="dock-p">NT$6,500</div>
+    <div class="dock-s" id="dockS">台北　09 / 16</div>
+  </div>
+  <a class="btn" href="#enroll">報名</a>
+</div>
+
+
+<script>
+(function(){
+"use strict";
+
+/* ── image data ─────────────────────────────── */
+var IMG = {
+  hero:'images/hero.jpg',
+  close:'images/closing.jpg',
+  leresa:'images/leresa.jpg',
+  ruru:'images/ruru.jpg'
+};
+var SHOTS=[
+ {s:'images/work-01.jpg',k:'前景層次',t:'用前景，讓平面變立體',b:'一朵花放在鏡頭與人之間，畫面就會有前後層次。窗邊的側逆光讓皮膚透亮，不需要另外補光。'},
+ {s:'images/work-02.jpg',k:'遮擋構圖',t:'遮住一半，反而更想看',b:'前景刻意擋掉一隻眼睛，視線就會被推向清楚的那一邊。對焦點永遠留給睫毛。'},
+ {s:'images/work-03.jpg',k:'對焦睫毛',t:'對焦在睫毛，不是在臉',b:'拍之前先點一下要清楚的位置。前景保留在畫面邊角，不干擾主體。'},
+ {s:'images/work-04.jpg',k:'環境入鏡',t:'讓環境框住人物',b:'把花枝放在額頭上方，形成天然畫框。頭髮的線條也會把視線帶回眼睛。'},
+ {s:'images/work-05.jpg',k:'俯角',t:'換一個高度，畫面就不一樣',b:'同一個人、同一個空間，站高一點往下拍，五官比例與構圖立刻不同。'},
+ {s:'images/work-06.jpg',k:'仰角',t:'仰角拍出睫毛的弧度',b:'從斜下方拍，睫毛的翹度會被完整看見。這是接睫作品最需要留住的細節。'},
+ {s:'images/work-07.jpg',k:'道具運用',t:'讓道具進來說話',b:'杯子與眼鏡不只是裝飾，它們建立了場景，也替畫面製造出透明的前景。'},
+ {s:'images/work-08.jpg',k:'生活感',t:'不是每張都要拍正面',b:'趴在桌上的自然姿勢，比端正的擺拍更容易讓人在滑動時停下來。'},
+ {s:'images/work-09.jpg',k:'留白',t:'把主體放在唯一的缺口',b:'前景占了大半畫面，只留一個清楚的開口。人的眼睛會自動找那個開口。'},
+ {s:'images/work-10.jpg',k:'一景多拍',t:'同一個場景，多拍幾種距離',b:'一次拍攝要取得整組素材，靠的就是遠中近與不同角度。'},
+ {s:'images/work-11.jpg',k:'自然光',t:'室內窗邊就是最好的棚',b:'讓人側對著窗，臉上會自然出現亮面與暗面。不用任何燈具。'}
+];
+
+function paint(el,src){ if(!el) return; el.src=src; el.classList.add('on'); }
+
+/* hero first, rest after paint */
+paint(document.getElementById('heroImg'), IMG.hero);
+requestAnimationFrame(function(){
+  paint(document.getElementById('imgL'), IMG.leresa);
+  paint(document.getElementById('imgR'), IMG.ruru);
+  paint(document.getElementById('closeImg'), IMG.close);
+});
+
+/* ── reveal ── */
+var io=new IntersectionObserver(function(es){
+  es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+},{threshold:.1,rootMargin:'0px 0px -6% 0px'});
+document.querySelectorAll('.rv').forEach(function(el,i){
+  el.style.transitionDelay=(Math.min(i%4,3)*90)+'ms';
+  io.observe(el);
+});
+
+/* ── nav + dock ── */
+var nav=document.getElementById('nav'), dock=document.getElementById('dock');
+var zones=[].slice.call(document.querySelectorAll('[data-nav]'));
+function navTone(){
+  var y=window.scrollY+38, z=zones[0];
+  for(var i=0;i<zones.length;i++){ if(zones[i].offsetTop<=y) z=zones[i]; }
+  var t=z.getAttribute('data-nav');
+  nav.classList.toggle('on-dark', t!=='light');
+  nav.classList.toggle('on-light', t==='light');
+  nav.classList.toggle('on-photo', t==='photo');
+}
+window.addEventListener('scroll',function(){
+  var y=window.scrollY;
+  nav.classList.toggle('tight', y>60);
+  dock.classList.toggle('show', y>window.innerHeight*1.1);
+  navTone();
+},{passive:true});
+window.addEventListener('resize',navTone);
+navTone();
+
+/* ── self check ── */
+var PAINS=[
+ '技術很好，但不知道怎麼經營自己',
+ 'IG 經營很久，曝光與預約還是沒有起色',
+ '不知道自己的品牌定位是什麼',
+ '版面一直沒有一致性',
+ '不知道 Reels、貼文到底要發什麼',
+ '作品本人很好看，照片卻拍不出來',
+ '不會自己製作品牌素材',
+ '不知道 AI 可以怎麼運用在工作上',
+ '想建立個人品牌，而不是只靠價格競爭'
+];
+var TIERS=[
+ {t:'先點選看看',b:'每一項都對應課程當天的一個環節。點完之後這裡會告訴妳，這堂課能替妳解決哪個部分。'},
+ {t:'方向大致清楚，缺的是系統',b:'妳已經有自己的節奏了。課程對妳的價值會在後半段：把零散的內容變成有結構的內容支柱，再用 AI 與拍攝把產出速度拉起來。'},
+ {t:'卡在「有在發，但沒有累積」',b:'這是最常見的狀況。問題通常不在努力，而在每篇貼文沒有各自的任務。課程會從品牌定位開始重新整理，再帶妳完成 7 天內容計畫。'},
+ {t:'這堂課幾乎就是為妳設計的',b:'妳點的這些，正好就是五個步驟要處理的全部內容——定位、內容企劃、AI 流程、手機拍攝、修圖與執行。一天走完，會很有感。'}
+];
+var pw=document.getElementById('pains');
+PAINS.forEach(function(txt){
+  var b=document.createElement('button');
+  b.type='button'; b.className='pain';
+  b.setAttribute('aria-pressed','false');
+  b.innerHTML='<span class="bx"></span><span>'+txt+'</span>';
+  b.addEventListener('click',function(){
+    var on=b.classList.toggle('on');
+    b.setAttribute('aria-pressed',on);
+    tally();
+  });
+  pw.appendChild(b);
+});
+var tn=document.getElementById('tn'),tt=document.getElementById('tt'),tb=document.getElementById('tb');
+function tally(){
+  var n=pw.querySelectorAll('.pain.on').length;
+  var t=TIERS[n===0?0:(n<=3?1:(n<=6?2:3))];
+  tn.textContent=n; tt.textContent=t.t; tb.textContent=t.b;
+  document.getElementById('qbar').style.width=(n/9*100)+'%';
+}
+
+/* ── curriculum ── */
+var STEPS=[
+ {c:'階段一　品牌定位',d:'整理定位、客群、關鍵字與視覺方向',t:'先把品牌說清楚',p:'經營 IG 之前，第一件事不是急著發文，而是先知道自己的品牌要說什麼。這個階段會帶妳把腦中模糊的想法，整理成可以執行的方向。',
+  g:['個人品牌定位','目標客群','品牌關鍵字','品牌風格與形象','品牌色系與視覺方向','IG 帳號整體規劃'],
+  q:'我是誰？我要吸引誰？客人為什麼要選擇我'},
+ {c:'階段二　內容企劃',d:'找出 3–5 個屬於自己的內容支柱',t:'知道 IG 到底要發什麼',p:'不用再每天打開 IG 才開始想「我今天到底要發什麼」。我們會帶妳建立自己的內容方向，找出 3–5 個專屬於妳的內容支柱。',
+  g:['Reels 短影音','貼文內容','限時動態','高互動內容','專業信任內容','預約／轉換內容','3–5 個內容支柱'],
+  q:'每一篇內容為什麼要發、要給誰看、能替品牌做到什麼'},
+ {c:'階段三　AI 工作流程',d:'建立一套可以重複使用的 Prompt',t:'AI 幫妳把企劃做快',p:'AI 不是只拿來寫文案。這堂課會教妳怎麼把 AI 真正放進日常工作流程裡，並建立一套可以持續使用的 AI Content Prompt。',
+  g:['不知道發什麼 → 發想題材','標題不會下 → 設計 Hook','想拍 Reels → 整理腳本','不知道拍什麼 → 建立拍攝清單','一份素材 → 延伸成貼文、Reels、限動'],
+  q:'把 AI 變成每天在用的工具，不是偶爾試試看'},
+ {c:'階段四　手機攝影實戰',d:'由 RuRu 帶著實際拍攝一整組素材',t:'把品牌內容真的拍出來',p:'由擁有 10 年以上攝影經驗的 RuRu 帶妳實際拍攝。重點不是拍出一張漂亮照片，而是一次拍攝就取得一整組可以真正拿來經營 IG 的品牌素材。不需要昂貴器材，一支手機就可以。',
+  g:['手機拍攝設定','光線判斷與補光','構圖與畫面比例','人物姿勢與引導','品牌形象照','美容作品拍攝','商品與細節','Reels 動態素材','不同場景運用'],
+  q:'一次拍攝，取得一整組品牌素材'},
+ {c:'階段五　修圖與執行',d:'修圖、選片，完成 7 天發文計畫',t:'拍完變成真正能用的 IG',p:'拍完素材之後，還要知道怎麼修、怎麼選、怎麼用。最後我們會一起完成一份 7 天 IG 內容計畫，讓妳離開教室後不是只有一堆筆記。',
+  g:['手機修圖','品牌色調統一','照片挑選','素材分類與整理','Reels／貼文／限動搭配','7 天 IG 內容計畫'],
+  q:'回到工作室就知道：要發什麼、怎麼拍、怎麼執行'}
+];
+var sl=document.getElementById('stepList');
+if(!sl) console.error('stepList missing');
+STEPS.forEach(function(st,i){
+  var d=document.createElement('div');
+  d.className='step'+(i===0?' on':'');
+  d.innerHTML=
+   '<button class="step-hd" aria-expanded="'+(i===0)+'">'+
+     '<span class="step-n">0'+(i+1)+'</span>'+
+     '<span class="step-main">'+
+       '<span class="step-cat">'+st.c+'</span>'+
+       '<span class="step-t">'+st.t+'</span>'+
+       '<span class="step-d">'+st.d+'</span>'+
+     '</span>'+
+     '<span class="step-x"></span>'+
+   '</button>'+
+   '<div class="step-body"><div class="step-in"><p>'+st.p+'</p>'+
+     '<ul class="tags">'+st.g.map(function(x){return '<li>'+x+'</li>'}).join('')+'</ul>'+
+     '<p class="step-q">'+st.q+'</p></div></div>';
+  sl.appendChild(d);
+});
+/* ── iPhone screens ── */
+var IPCAP=[
+ '品牌定位　IG 帳號整體規劃',
+ '內容企劃　3–5 個內容支柱',
+ 'AI 工作流程　題材與腳本',
+ '手機攝影　現場拍攝設定',
+ '修圖　品牌色調統一'
+];
+function g(i){ return SHOTS[i].s; }
+var SCREENS=[
+ // 1 品牌定位
+ '<div class="s-bar"><b>momizi.salon</b><i>個人檔案</i></div>'+
+ '<div class="s-in">'+
+   '<div class="pf"><div class="pf-av">椛</div><div class="pf-st">'+
+     '<span><b>128</b>貼文</span><span><b>2,341</b>追蹤者</span><span><b>312</b>追蹤中</span>'+
+   '</div></div>'+
+   '<div class="pf-bio">設計感睫毛設計<br>新北 板橋・完全預約制<br>讓妳素顏也有神</div>'+
+   '<div class="chips"><span>自然裸妝感</span><span>單人包場</span><span>不趕客</span></div>'+
+   '<div class="mini9">'+[0,1,2,3,4,5,6,7,8].map(function(i){
+     return '<img src="'+g(i)+'" alt="">';}).join('')+'</div>'+
+ '</div>',
+
+ // 2 內容企劃
+ '<div class="s-bar"><b>我的內容支柱</b><i>五項</i></div>'+
+ '<div class="s-in">'+
+   [['作品實拍','40%',40],['專業信任','20%',20],['幕後日常','15%',15],['客人故事','15%',15],['預約引導','10%',10]]
+   .map(function(x){
+     return '<div class="pil"><div class="pil-h"><span>'+x[0]+'</span><em>'+x[1]+'</em></div>'+
+            '<div class="pil-b"><i style="width:'+x[2]+'%"></i></div></div>';
+   }).join('')+
+   '<div class="saved">每一篇貼文都屬於其中一項</div>'+
+ '</div>',
+
+ // 3 AI
+ '<div class="s-bar"><b>AI Content Prompt</b><i>已儲存</i></div>'+
+ '<div class="s-in">'+
+   '<div class="cb me">這週的 Reels 要拍什麼？</div>'+
+   '<div class="cb ai"><b>三個題材</b>'+
+     '1　接睫前後 15 秒對比<br>'+
+     '2　最多人問的「會不會傷睫毛」<br>'+
+     '3　卸妝時的正確清潔方式</div>'+
+   '<div class="cb me">第 2 個，給我腳本</div>'+
+   '<div class="cb ai"><b>15 秒腳本</b>'+
+     '0–3s　鏡頭拉近眼睛<br>'+
+     '3–9s　說明真正的原因<br>'+
+     '9–15s　留言區導預約</div>'+
+ '</div>',
+
+ // 4 攝影
+ '<div class="cam">'+
+   '<img src="'+g(3)+'" alt="">'+
+   '<div class="cam-g"></div>'+
+   '<div class="cam-f"><span>對焦　睫毛</span></div>'+
+   '<div class="cam-z"><span>0.5</span><span class="on">1×</span><span>2</span></div>'+
+   '<div class="cam-s"></div>'+
+ '</div>',
+
+ // 5 修圖
+ '<div class="s-bar"><b>品牌色調</b><i>套用中</i></div>'+
+ '<div class="ed" id="ed">'+
+   '<img class="a" src="'+g(9)+'" alt="">'+
+   '<img class="b" src="'+g(9)+'" alt="">'+
+   '<div class="ed-l"><span class="ed-h">‹ ›</span></div>'+
+   '<span class="ed-t l">原始</span><span class="ed-t r">品牌色調</span>'+
+   '<span class="ed-tip" id="edTip">拖曳看看</span>'+
+ '</div>'+
+ '<div class="s-in">'+
+   [['亮度','+12',62],['飽和度','−8',38],['色溫','+5',56],['對比','+3',52]]
+   .map(function(x){
+     return '<div class="sld"><div class="sld-h"><span>'+x[0]+'</span><em>'+x[1]+'</em></div>'+
+            '<div class="sld-t"><i style="left:calc('+x[2]+'% - 3px)"></i></div></div>';
+   }).join('')+
+   '<div class="saved">存成預設　下次一鍵套用</div>'+
+ '</div>'
+];
+
+var scWrap=document.getElementById('screens'), ipCap=document.getElementById('ipCap');
+var edDemo=false;
+function initEd(){
+  var ed=document.getElementById('ed'); if(!ed||ed.dataset.rdy) return;
+  ed.dataset.rdy='1';
+  var tip=document.getElementById('edTip'), live=false;
+  function set(v){ ed.style.setProperty('--sp', Math.max(4,Math.min(96,v))+'%'); }
+  function fromEvent(e){
+    var r=ed.getBoundingClientRect();
+    set((e.clientX-r.left)/r.width*100);
+  }
+  ed.addEventListener('pointerdown',function(e){
+    live=true; ed.setPointerCapture(e.pointerId);
+    if(tip) tip.style.opacity=0;
+    fromEvent(e); e.preventDefault();
+  });
+  ed.addEventListener('pointermove',function(e){ if(live) fromEvent(e); });
+  ['pointerup','pointercancel'].forEach(function(t){
+    ed.addEventListener(t,function(){ live=false; });
+  });
+  ed.__set=set;
+}
+function demoEd(){
+  var ed=document.getElementById('ed'); if(!ed||edDemo) return;
+  edDemo=true;
+  var seq=[[18,340],[86,1100],[52,1750]], t0=performance.now(), from=52, idx=0, start=t0;
+  function step(now){
+    var leg=seq[idx]; if(!leg) return;
+    var k=Math.min(1,(now-start)/leg[1]);
+    var e=k<.5?4*k*k*k:1-Math.pow(-2*k+2,3)/2;
+    ed.style.setProperty('--sp',(from+(leg[0]-from)*e)+'%');
+    if(k<1){ requestAnimationFrame(step); }
+    else{ from=leg[0]; idx++; start=performance.now(); if(seq[idx]) requestAnimationFrame(step); }
+  }
+  requestAnimationFrame(step);
+}
+SCREENS.forEach(function(html,i){
+  var d=document.createElement('div');
+  d.className='scr'+(i===0?' on':''); d.innerHTML=html;
+  scWrap.appendChild(d);
+});
+var scrs=[].slice.call(scWrap.children);
+function setScreen(i){
+  scrs.forEach(function(s,j){ s.classList.toggle('on', j===i); });
+  if(i===4){ initEd(); setTimeout(demoEd,400); }
+  ipCap.style.opacity=0;
+  setTimeout(function(){ ipCap.textContent=IPCAP[i]; ipCap.style.opacity=1; },260);
+}
+
+/* phone follows the open step; on narrow screens it moves inside it */
+var openIdx=0;
+function placePhone(){
+  var bd=stepEls[openIdx] && stepEls[openIdx].querySelector('.step-body');
+  if(bd && stepEls[openIdx].classList.contains('on')){
+    requestAnimationFrame(function(){ bd.style.maxHeight=bd.scrollHeight+'px'; });
+  }
+}
+
+function open(el,yes){ el.style.maxHeight=yes?el.scrollHeight+'px':0; }
+var stepEls=[].slice.call(sl.children);
+stepEls.forEach(function(st){
+  var hd=st.querySelector('.step-hd'), bd=st.querySelector('.step-body');
+  if(st.classList.contains('on')) setTimeout(function(){ placePhone(); open(bd,true); },90);
+  hd.addEventListener('click',function(){
+    if(st.classList.contains('on')) return;
+    stepEls.forEach(function(o){
+      o.classList.remove('on');
+      o.querySelector('.step-hd').setAttribute('aria-expanded','false');
+      open(o.querySelector('.step-body'),false);
+    });
+    st.classList.add('on');
+    hd.setAttribute('aria-expanded','true');
+    openIdx=stepEls.indexOf(st);
+    setScreen(openIdx);
+    placePhone();
+    open(bd,true);
+  });
+});
+
+/* ── works strip + lightbox ── */
+var strip=document.getElementById('strip');
+SHOTS.forEach(function(sh,i){
+  var b=document.createElement('button');
+  b.type='button'; b.className='shot'; b.dataset.i=i;
+  b.setAttribute('aria-label','放大：'+sh.t);
+  b.innerHTML='<span class="shot-f"><img alt="'+sh.t+'"></span>'+
+    '<span class="shot-c"><b>'+('0'+(i+1)).slice(-2)+'</b>'+sh.k+'</span>';
+  strip.appendChild(b);
+});
+var stripImgs=[].slice.call(strip.querySelectorAll('img'));
+var sio=new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(e.isIntersecting){
+      var im=e.target, i=[].indexOf.call(stripImgs,im);
+      paint(im,SHOTS[i].s); sio.unobserve(im);
+    }
+  });
+},{root:strip,rootMargin:'400px'});
+stripImgs.forEach(function(im){ sio.observe(im); });
+
+var lb=document.getElementById('lb'),lbImg=document.getElementById('lbImg'),
+    lbT=document.getElementById('lbT'),lbB=document.getElementById('lbB'),
+    lbN=document.getElementById('lbN'),cur=0,opener=null;
+function show(i){
+  cur=(i+SHOTS.length)%SHOTS.length;
+  var s=SHOTS[cur];
+  lbImg.src=s.s; lbImg.alt=s.t;
+  lbT.textContent=s.t; lbB.textContent=s.b;
+  lbN.textContent=('0'+(cur+1)).slice(-2)+' ／ '+SHOTS.length;
+}
+function closeLb(){
+  lb.classList.remove('show'); document.body.style.overflow='';
+  if(opener) opener.focus();
+}
+strip.addEventListener('click',function(e){
+  var b=e.target.closest('.shot'); if(!b) return;
+  opener=b; show(+b.dataset.i);
+  lb.classList.add('show'); document.body.style.overflow='hidden';
+  document.getElementById('lbX').focus();
+});
+document.getElementById('lbX').addEventListener('click',closeLb);
+document.getElementById('lbPrev').addEventListener('click',function(){show(cur-1)});
+document.getElementById('lbNext').addEventListener('click',function(){show(cur+1)});
+lb.addEventListener('click',function(e){ if(e.target===lb) closeLb(); });
+document.addEventListener('keydown',function(e){
+  if(!lb.classList.contains('show'))return;
+  if(e.key==='Escape')closeLb();
+  if(e.key==='ArrowRight')show(cur+1);
+  if(e.key==='ArrowLeft')show(cur-1);
+});
+
+/* ── feed: tone before / after ── */
+var OFF=[
+ 'saturate(1.5) hue-rotate(-12deg) contrast(1.12)',
+ 'sepia(.55) saturate(1.3) brightness(1.08)',
+ 'saturate(.45) contrast(1.3) brightness(.9)',
+ 'hue-rotate(18deg) saturate(1.35)',
+ 'contrast(1.25) brightness(1.14) saturate(1.4)',
+ 'sepia(.3) hue-rotate(-20deg) saturate(1.6)',
+ 'saturate(.6) brightness(1.16) contrast(.88)',
+ 'hue-rotate(-25deg) saturate(1.45) contrast(1.1)',
+ 'brightness(.86) saturate(1.5) sepia(.2)'
+];
+var ON='saturate(.86) contrast(1.03) brightness(1.03) sepia(.06)';
+var g9=document.getElementById('grid9'), g9imgs=[];
+for(var i=0;i<9;i++){
+  var d=document.createElement('div'); d.className='g9';
+  var im=document.createElement('img'); im.alt='';
+  im.style.filter=OFF[i];
+  d.appendChild(im); g9.appendChild(d); g9imgs.push(im);
+}
+var gio=new IntersectionObserver(function(es){
+  if(es[0].isIntersecting){
+    g9imgs.forEach(function(im,i){
+      setTimeout(function(){ paint(im,SHOTS[i].s); }, i*70);
+    });
+    gio.disconnect();
+    setTimeout(function(){ setTone(true); }, 2200);
+  }
+},{threshold:.25});
+gio.observe(g9);
+
+var bB=document.getElementById('bBefore'), bA=document.getElementById('bAfter');
+function setTone(after){
+  bA.setAttribute('aria-pressed',after);
+  bB.setAttribute('aria-pressed',!after);
+  g9imgs.forEach(function(im,i){
+    im.style.transitionDelay=(i*55)+'ms';
+    im.style.filter = after ? ON : OFF[i];
+  });
+}
+bA.addEventListener('click',function(){setTone(true)});
+bB.addEventListener('click',function(){setTone(false)});
+
+/* ── 7-day planner ── */
+var svc='美睫', goal='booking';
+var WEEK=[
+ {k:'Reels',    booking:'{s}服務前後的 15 秒對比，開頭直接放結果',   trust:'{s}最常被問的一個問題，用 15 秒講清楚',  brand:'一天工作的開場：開店、備料、第一位客人'},
+ {k:'貼文',     booking:'本週剩餘時段，加上適合預約的三種情境',      trust:'{s}的挑選重點，妳會怎麼幫客人判斷',      brand:'我為什麼開始做{s}，寫給還在觀望的人'},
+ {k:'限時動態', booking:'投票：下次想看哪一種{s}風格',              trust:'工作中的小片段，配一句專業說明',          brand:'工作桌上的日常物件，配一句品牌關鍵字'},
+ {k:'貼文',     booking:'作品實拍三張，說明這款適合的臉型與需求',    trust:'{s}後的保養方式，做成可收藏的圖卡',      brand:'品牌色系的細節特寫，色調統一'},
+ {k:'Reels',    booking:'完整服務流程縮時，結尾放預約引導',          trust:'常見迷思一次破解，一則講一個',            brand:'空間與氛圍的移動鏡頭，不講話只放音樂'},
+ {k:'限時動態', booking:'客人回饋截圖，附上預約連結',                trust:'回覆一則私訊問題，公開解答',              brand:'幕後：一張作品照從拍到修的過程'},
+ {k:'貼文',     booking:'本月主打方案，說清楚適合誰、怎麼約',        trust:'{s}的專業養成之路，證照與訓練',          brand:'這週最喜歡的一張作品，寫下它的故事'}
+];
+var wk=document.getElementById('week');
+function renderWeek(){
+  wk.innerHTML='';
+  WEEK.forEach(function(d,i){
+    var el=document.createElement('div');
+    el.className='dayc'; el.style.animationDelay=(i*60)+'ms';
+    el.innerHTML='<h4>DAY 0'+(i+1)+'</h4><div class="kind">'+d.k+'</div><p>'+
+      d[goal].replace(/\{s\}/g,svc)+'</p>';
+    wk.appendChild(el);
+  });
+}
+function optGroup(id,cb){
+  var g=document.getElementById(id);
+  g.addEventListener('click',function(e){
+    var b=e.target.closest('.opt'); if(!b) return;
+    [].slice.call(g.children).forEach(function(o){ o.setAttribute('aria-pressed',o===b); });
+    cb(b.dataset.v); renderWeek();
+  });
+}
+optGroup('svc',function(v){svc=v});
+optGroup('goal',function(v){goal=v});
+renderWeek();
+
+/* ── faq ── */
+var FAQ=[
+ ['這是第一次開這堂課嗎？','是。這是 2026 全新改版後的首發場，內容從原本的攝影課升級成品牌、內容、AI 與攝影四合一。首發場採首發價，名額也比後續場次少。'],
+ ['可以分期嗎？','可以。付款方式有轉帳、信用卡與中租分期，報名後我會把細節傳給妳。兩人同行報名為 NT$12,000。'],
+ ['完全沒有經營過 IG，可以來嗎？','可以。課程是從品牌定位開始，第一步就是幫妳把要說什麼想清楚，再往內容與拍攝走。反而是還沒建立習慣的人，比較不用重新調整既有版面。'],
+ ['需要準備什麼器材嗎？','一支手機就可以。整堂攝影實戰都是以手機拍攝為主，包含設定、光線、構圖與修圖，不需要準備昂貴的攝影器材。'],
+ ['我不是做美睫的，其他項目適合嗎？','適合。課程針對的是美容工作者共同會遇到的問題——作品要怎麼被看見、品牌要怎麼被記得。美甲、紋繡、護膚、頭皮養護或教學招生，都可以套用同一套方法。'],
+ ['完全不會用 AI，跟得上嗎？','跟得上。這個段落是從零開始帶，重點不是教妳懂 AI，而是給妳一套可以直接複製使用的 Prompt，回去打開就能用。'],
+ ['上課地點在哪裡？','台北場，詳細地點會於課前另行通知。時間是 09:30 到 18:30，為完整一日課程。'],
+ ['怎麼報名？','用 LINE 跟我說「我要報名行銷攝影 2.0」，並告訴我想上的場次，我會再把報名方式與注意事項傳給妳。']
+];
+var fw=document.getElementById('faq');
+FAQ.forEach(function(f){
+  var d=document.createElement('div'); d.className='fq';
+  d.innerHTML='<button class="fq-hd" aria-expanded="false">'+f[0]+'<span class="fq-s">+</span></button>'+
+              '<div class="fq-b"><p>'+f[1]+'</p></div>';
+  fw.appendChild(d);
+  var hd=d.querySelector('.fq-hd'), bd=d.querySelector('.fq-b');
+  hd.addEventListener('click',function(){
+    var yes=d.classList.toggle('on');
+    hd.setAttribute('aria-expanded',yes);
+    open(bd,yes);
+  });
+});
+window.addEventListener('resize',function(){
+  placePhone();
+  document.querySelectorAll('.step.on .step-body,.fq.on .fq-b').forEach(function(b){
+    b.style.maxHeight=b.scrollHeight+'px';
+  });
+});
+
+/* ── LINE：填入官方帳號 @ID 即可自動帶入訊息 ── */
+var LINE_ID = '';                          // ← 例如 '@075yhqqb'
+var LINE_URL = 'https://lin.ee/sIBZM7Y';   // 沒填 ID 時走這個
+function lineHref(text){
+  return LINE_ID ? 'https://line.me/R/oaMessage/'+encodeURIComponent(LINE_ID)+'/?'+encodeURIComponent(text)
+                 : LINE_URL;
+}
+function syncCta(){
+  var t=msg.textContent, a=document.getElementById('ctaMain');
+  if(a) a.href=lineHref(t);
+  document.querySelectorAll('.close .btn').forEach(function(b){ b.href=lineHref(t); });
+}
+
+/* ── session ── */
+var msg=document.getElementById('msg'), dockS=document.getElementById('dockS');
+document.getElementById('sess').addEventListener('click',function(e){
+  var b=e.target.closest('.sbtn'); if(!b) return;
+  [].slice.call(this.children).forEach(function(x){ x.setAttribute('aria-pressed',x===b); });
+  msg.textContent='我要報名行銷攝影 2.0（'+b.dataset.d+' 台北場）';
+  dockS.textContent='台北　'+b.dataset.d.replace('/',' / ');
+  syncCta();
+});
+syncCta();
+})();
+</script>
+</body>
+</html>
