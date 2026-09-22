@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>IG 品牌經營 × 手機攝影實戰班｜Leresa 椛 × RuRu</title>
-<meta name="description" content="美容工作者的一日實戰課。從品牌定位、IG 內容企劃、AI 應用到手機攝影與修圖。2026 台北場 10/14。">
+<meta name="description" content="美容工作者的一日實戰課。從品牌定位、IG 內容企劃、AI 應用到手機攝影與修圖。2026 台北 10/14 起，台北・高雄場次陸續開放。">
 <meta property="og:title" content="IG 品牌經營 × 手機攝影實戰班">
 <meta property="og:description" content="妳缺的可能不是作品，而是讓作品被看見的方法。">
 <meta name="theme-color" content="#EDECEA">
@@ -87,6 +87,8 @@ h2 em{font-style:normal;color:var(--coffee)}
   transition:background .5s,color .5s,padding .4s
 }
 .nav.tight{padding:14px var(--pad)}
+.nav.hide{transform:translateY(-110%)}
+.nav{transition:background .5s,color .5s,padding .4s,transform .45s cubic-bezier(.16,.7,.3,1)}
 .nav.on-light{color:var(--ink)}
 .nav.on-light .nb-1{opacity:.6}
 .nav.on-dark{color:var(--bone)}
@@ -154,6 +156,25 @@ h2 em{font-style:normal;color:var(--coffee)}
 .mark{
   width:1px;height:clamp(46px,7vw,86px);background:var(--hair);
   margin:0 auto clamp(34px,5vw,54px)
+}
+
+.notice{padding:0 0 clamp(50px,8vw,80px)}
+.notice p{
+  display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px;margin:0;
+  padding:22px 0;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);
+  font-size:13px;letter-spacing:.1em
+}
+.notice b{font-weight:400;color:var(--coffee);letter-spacing:.18em}
+.notice span{color:var(--ink)}
+.notice s{text-decoration:none;color:var(--ink2)}
+.notice a{
+  margin-left:auto;font-size:11.5px;letter-spacing:.22em;color:var(--ink);
+  padding-bottom:4px;border-bottom:1px solid var(--hair);transition:.3s
+}
+.notice a:hover{border-color:var(--ink)}
+@media(max-width:640px){
+  .notice p{gap:7px 0;flex-direction:column;align-items:flex-start;font-size:12.5px}
+  .notice a{margin:8px 0 0}
 }
 
 /* ═ quiz card ═ */
@@ -237,7 +258,20 @@ h2 em{font-style:normal;color:var(--coffee)}
   color:rgba(237,236,234,.5);margin-top:10px
 }
 .step.on .step-d{display:none}
+.step-more{
+  flex:none;font-size:10.5px;letter-spacing:.24em;color:rgba(237,236,234,.5);
+  margin:26px 14px 0 0;transition:.3s
+}
+.step.on .step-more{opacity:0}
+.step-hd:hover .step-more{color:#C0A480}
 .step-x{position:relative;width:13px;height:13px;flex:none;opacity:.55;margin-top:26px}
+.steps.seen .step:not(.on) .step-x{animation:tapHint 3s ease-in-out 2}
+@keyframes tapHint{
+  0%,74%,100%{transform:scale(1);opacity:.55}
+  82%{transform:scale(1.55);opacity:1}
+  90%{transform:scale(1);opacity:.55}
+}
+.stage-tabs{display:none}
 .step-x::before,.step-x::after{content:"";position:absolute;background:currentColor;transition:transform .45s}
 .step-x::before{top:6px;left:0;width:13px;height:1px}
 .step-x::after{left:6px;top:0;width:1px;height:13px}
@@ -307,7 +341,7 @@ h2 em{font-style:normal;color:var(--coffee)}
   width:44px;height:44px;border-radius:50%;flex:none;background:var(--coffee);
   color:var(--white);display:grid;place-items:center;font-family:var(--serif);font-size:16px
 }
-.pf-st{display:flex;gap:11px;font-size:7.5px;color:var(--ink2)}
+.pf-st{display:flex;gap:11px;font-size:7.5px;color:var(--ink2);white-space:nowrap}
 .pf-st b{display:block;font-size:11px;color:var(--ink);font-family:var(--latin);font-weight:400}
 .pf-bio{font-size:8px;color:var(--ink2);margin-bottom:8px;line-height:1.8}
 .chips{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:11px}
@@ -317,6 +351,30 @@ h2 em{font-style:normal;color:var(--coffee)}
 }
 .mini9{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
 .mini9 img{width:100%;aspect-ratio:1;object-fit:cover}
+
+/* 1 profile — real account */
+.ig-bar b{font-weight:500;letter-spacing:.02em;font-size:9.5px}
+.ig-bar i{color:var(--ink);font-size:11px;letter-spacing:.1em}
+.s-in.ig{padding:11px 12px}
+.ig-top{display:flex;align-items:center;gap:12px;margin-bottom:9px}
+.ig-av{
+  width:52px;height:52px;border-radius:50%;flex:none;padding:2px;
+  background:linear-gradient(135deg,#C0A480,#8B6F4E)
+}
+.ig-av img{width:100%;height:100%;border-radius:50%;object-fit:cover;border:2px solid var(--white)}
+.ig-st{flex:1;display:flex;justify-content:space-around;text-align:center;white-space:nowrap;font-size:7px;color:var(--ink2)}
+.ig-st b{display:block;font-size:10.5px;font-weight:500;color:var(--ink);font-family:var(--sans);letter-spacing:0}
+.ig-name{margin:0 0 4px;font-size:8px;font-weight:500;letter-spacing:.02em;display:flex;align-items:center;gap:4px}
+.ig-name i{display:inline-block;width:1px;height:9px;background:var(--ink2);margin:0 2px}
+.ig-bio{margin:0 0 4px;font-size:7.3px;line-height:1.72;letter-spacing:0;color:var(--ink)}
+.ig-link{margin:0 0 8px;font-size:7.3px;font-weight:500;color:#3E5A7A;letter-spacing:0}
+.ig-btn{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-bottom:9px}
+.ig-btn span{
+  text-align:center;padding:5px 0;border-radius:5px;background:var(--bone);
+  font-size:7.5px;font-weight:500;letter-spacing:.04em
+}
+.ig-btn span.p{background:var(--coffee);color:#fff}
+.s-in.ig .mini9{margin:0 -12px}
 
 /* 2 pillars */
 .pil{margin-bottom:11px}
@@ -399,29 +457,82 @@ h2 em{font-style:normal;color:var(--coffee)}
 }
 
 @media(max-width:900px){
-  .flow2{grid-template-columns:1fr;gap:0}
-  .phone-col{
-    position:sticky;top:0;z-index:8;
-    background:var(--dark);padding:14px 0 16px;
-    margin:0 calc(var(--pad)*-1);
-    box-shadow:0 18px 26px -22px rgba(0,0,0,.9)
+  .flow2{display:flex;flex-direction:column;gap:0;margin-top:30px}
+
+  .stage-tabs{
+    display:block;order:1;position:sticky;top:0;z-index:9;
+    background:var(--dark);margin:0 calc(var(--pad)*-1);padding:14px 0 0;
+    box-shadow:0 16px 22px -20px rgba(0,0,0,.92)
   }
+  .tabs-row{
+    display:grid;grid-template-columns:repeat(5,1fr);
+    padding:0 var(--pad) 10px;gap:2px
+  }
+  .tab{
+    display:flex;flex-direction:column;align-items:center;gap:7px;
+    padding:9px 2px 11px;border:0;border-radius:0;margin:0;background:none;
+    color:rgba(237,236,234,.5);position:relative;transition:color .3s
+  }
+  .tab::after{
+    content:"";position:absolute;left:14%;right:14%;bottom:0;height:1px;
+    background:#C0A480;transform:scaleX(0);transition:transform .35s cubic-bezier(.16,.7,.3,1)
+  }
+  .tab b{
+    font-family:var(--latin);font-size:13px;font-weight:400;
+    letter-spacing:.04em;margin:0;opacity:.75
+  }
+  .tab span{font-size:10.5px;letter-spacing:.02em;white-space:nowrap}
+  .tab[aria-pressed="true"]{color:var(--bone)}
+  .tab[aria-pressed="true"] b{color:#C0A480;opacity:1}
+  .tab[aria-pressed="true"]::after{transform:scaleX(1)}
+  .tabs-row{border-bottom:1px solid rgba(237,236,234,.14)}
+  .tabs-hint{
+    margin:0;padding:12px var(--pad) 13px;font-size:10px;
+    letter-spacing:.22em;color:rgba(237,236,234,.42);text-align:center
+  }
+
+  .phone-col{order:2;position:static;background:none;box-shadow:none;margin:26px 0 0;padding:0}
   .iphone{
-    width:clamp(126px,33vw,152px);margin:0 auto;padding:5px;border-radius:26px;
+    width:min(68vw,272px);margin:0 auto;padding:8px;border-radius:38px;
     opacity:1!important;transform:none!important
   }
-  .ip-body{border-radius:21px}
-  .ip-island{height:12px;top:5px}
-  .ip-cap{margin-top:11px;font-size:9px;letter-spacing:.2em}
-  .steps{margin-top:6px}
-  .scr{font-size:7px}
-  .s-bar{padding:22px 9px 7px;font-size:7.5px}
-  .s-in{padding:8px 9px}
-  .pf-av{width:32px;height:32px;font-size:12px}
-  .cb{font-size:7px;padding:6px 8px}
-  .cam-s{width:24px;height:24px;bottom:9px}
-  .cam-z{bottom:39px}
-  .cam-f{width:32px;height:32px}
+  .ip-body{border-radius:31px}
+  .ip-island{height:17px;top:7px}
+  .ip-cap{margin-top:16px;font-size:10px}
+
+  .steps{order:3;margin-top:28px}
+  .step{border:0}
+  .step:not(.on){display:none}
+  .step-hd{pointer-events:none;padding:0 0 18px;gap:14px}
+  .step-x,.step-more{display:none}
+  .step-n{margin-top:2px}
+  .step-in{padding-bottom:0}
+}
+
+/* ═ timetable ═ */
+.tt{list-style:none;margin:clamp(36px,5vw,52px) 0 0;padding:0;max-width:720px}
+.tt li{
+  display:flex;gap:clamp(20px,4vw,52px);align-items:baseline;
+  padding:20px 0;border-top:1px solid var(--hair)
+}
+.tt li:last-child{border-bottom:1px solid var(--hair)}
+.tt--rest{opacity:.5}
+.tt-t{
+  flex:none;width:clamp(58px,10vw,74px);font-family:var(--latin);
+  font-size:15px;letter-spacing:.06em;line-height:1.5;color:var(--coffee)
+}
+.tt-t i{display:block;font-style:normal;color:var(--ink2);opacity:.75}
+.tt--rest .tt-t{color:var(--ink2)}
+.tt-c b{
+  display:block;font-family:var(--serif);font-weight:300;
+  font-size:clamp(16px,3.4vw,20px);letter-spacing:.1em;line-height:1.6
+}
+.tt-c em{
+  display:block;font-style:normal;font-size:13.5px;letter-spacing:.04em;
+  color:var(--ink2);margin-top:8px;line-height:1.85
+}
+.tt-end{
+  margin:26px 0 0;font-size:12px;letter-spacing:.2em;color:var(--coffee)
 }
 
 /* ═ works ═ */
@@ -548,8 +659,12 @@ h2 em{font-style:normal;color:var(--coffee)}
 .tbody p{margin:0 0 26px;font-size:14.5px;line-height:2.1;color:var(--ink2)}
 .tlist{margin:0;padding:0}
 .tlist li{
-  list-style:none;font-size:13.5px;letter-spacing:.06em;padding:10px 0;
-  border-top:1px solid var(--hair);color:var(--ink)
+  list-style:none;font-size:13.5px;letter-spacing:.06em;padding:11px 0;
+  border-top:1px solid var(--hair);color:var(--ink);line-height:1.7
+}
+.tlist em{
+  display:block;font-style:normal;font-size:11px;letter-spacing:.16em;
+  color:var(--coffee);opacity:.85;margin-top:5px
 }
 
 /* ═ takeaway ═ */
@@ -575,8 +690,19 @@ h2 em{font-style:normal;color:var(--coffee)}
 .sbtn[aria-pressed="true"] .sdot{background:var(--coffee);box-shadow:none}
 .sd{font-family:var(--latin);font-size:clamp(23px,4vw,30px);font-weight:300;letter-spacing:.1em}
 .sm{font-size:11px;letter-spacing:.24em;color:var(--ink2);margin-top:6px}
-.sbtn span.city{margin-left:auto;font-size:10.5px;letter-spacing:.3em;color:var(--ink2)}
+.sbtn span.city{margin-left:auto;font-size:10.5px;letter-spacing:.3em;color:var(--ink2);text-align:right}
+.sbtn span.city em{display:block;font-style:normal;font-size:10px;letter-spacing:.14em;opacity:.75;margin-top:6px}
 .sbtn[aria-pressed="true"] span.city{color:var(--coffee)}
+.tgrp{margin-bottom:clamp(30px,4vw,44px)}
+.tgrp:last-child{margin-bottom:0}
+.tgrp-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 16px;padding-bottom:14px}
+.tgrp-n{
+  font-size:10.5px;letter-spacing:.3em;padding:6px 14px;
+  background:var(--coffee);color:#FAF7F3
+}
+.tgrp--main .tgrp-n{background:transparent;color:var(--ink2);box-shadow:inset 0 0 0 1px var(--hair)}
+.tgrp-p{font-family:var(--latin);font-size:19px;letter-spacing:.06em;font-weight:400}
+.tgrp-d{font-size:11.5px;letter-spacing:.12em;color:var(--ink2)}
 .sbtn.soon{cursor:default;opacity:.5}
 .sbtn.soon .sd{font-family:var(--serif);font-weight:200;font-size:clamp(18px,3.2vw,23px);letter-spacing:.14em}
 .sbtn.soon .sdot{box-shadow:inset 0 0 0 1px var(--hair);background:transparent}
@@ -642,6 +768,16 @@ h2 em{font-style:normal;color:var(--coffee)}
   display:block;font-style:normal;font-size:12px;letter-spacing:.04em;
   color:var(--coffee);margin-top:7px;line-height:1.8
 }
+.terms{margin-top:clamp(40px,6vw,60px);max-width:600px}
+.terms-h{font-size:10.5px;letter-spacing:.32em;color:var(--coffee);margin:0 0 22px}
+.terms-l{margin:0}
+.terms-l dt{
+  font-family:var(--serif);font-weight:300;font-size:15px;letter-spacing:.12em;
+  padding-top:18px;border-top:1px solid var(--hair)
+}
+.terms-l dd{margin:8px 0 18px;font-size:13.5px;line-height:1.95;color:var(--ink2)}
+.terms-l dd:last-child{margin-bottom:0;padding-bottom:18px;border-bottom:1px solid var(--hair)}
+
 .bonus{margin-top:clamp(40px,6vw,60px);max-width:52ch}
 .bonus h3{font-family:var(--serif);font-weight:200;font-size:clamp(18px,3.4vw,23px);letter-spacing:.12em;margin:0 0 16px}
 .bonus p{margin:0;color:var(--ink2);font-size:14.5px}
@@ -692,6 +828,7 @@ footer{
 }
 .dock.show{transform:none}
 .dock-p{font-family:var(--latin);font-size:20px;font-weight:400;letter-spacing:.06em;line-height:1.3}
+.dock-p i{font-style:normal;font-family:var(--sans);font-size:11px;letter-spacing:.14em;color:var(--ink2);margin-left:5px}
 .dock-s{font-size:9.5px;letter-spacing:.22em;color:var(--ink2)}
 .dock .btn{background:var(--coffee);color:#FAF7F3;padding:14px 26px;font-size:11.5px}
 .dock .btn:hover{background:var(--dark)}
@@ -734,6 +871,33 @@ footer{
   .hero-kick,.hero h1 span,.hero-sub,.hero-meta{opacity:1;animation:none}
 }
 </style>
+<!-- ══ 數據追蹤：把下面兩組 ID 換成你自己的，未填不會影響網站運作 ══ -->
+<script>
+window.TRACK_GA4 = '';   // 例如 'G-XXXXXXXXXX'
+window.TRACK_META = '';  // 例如 '123456789012345'
+(function(){
+  if(window.TRACK_GA4){
+    var g=document.createElement('script');
+    g.async=true; g.src='https://www.googletagmanager.com/gtag/js?id='+window.TRACK_GA4;
+    document.head.appendChild(g);
+    window.dataLayer=window.dataLayer||[];
+    window.gtag=function(){dataLayer.push(arguments)};
+    gtag('js',new Date()); gtag('config',window.TRACK_GA4);
+  }
+  if(window.TRACK_META){
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+    (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init',window.TRACK_META); fbq('track','PageView');
+  }
+})();
+function track(name,data){
+  if(window.gtag) gtag('event',name,data||{});
+  if(window.fbq) fbq('trackCustom',name,data||{});
+}
+</script>
 </head>
 <body>
 
@@ -753,8 +917,9 @@ footer{
     <h1><span>IG 品牌經營 <i>×</i></span><span>手機攝影實戰班</span></h1>
     <p class="hero-sub">美容工作者的一日實戰課</p>
     <div class="hero-meta">
-      <span>2026</span><b>10.14</b>
-      <span>台北</span><span>09:30 – 18:30</span>
+      <span>2026</span><b>10.14</b><s>起</s>
+      <span>台北・高雄</span>
+      <span>09:30 – 18:30</span>
     </div>
   </div>
 </section>
@@ -765,6 +930,18 @@ footer{
     <div class="mark rv"></div>
     <h2 class="rv">妳缺的可能不是作品<br><b>而是讓作品被看見的方法</b></h2>
     <p class="rv">這次我們把原本的攝影課全面升級。不只教妳怎麼拍漂亮，而是把品牌經營、內容企劃、AI 與手機攝影全部串在一起，用一天的時間建立屬於自己的品牌內容系統。</p>
+  </div>
+</section>
+
+<!-- ═══ PRICE NOTICE ═══ -->
+<section class="notice" data-nav="light">
+  <div class="wrap">
+    <p class="rv">
+      <b>首發場只有兩場</b>
+      <span>10 / 14 台北・11 / 02 高雄　NT$6,500</span>
+      <s>11 / 25 起恢復正式價 NT$8,800</s>
+      <a href="#enroll">看場次</a>
+    </p>
   </div>
 </section>
 
@@ -803,6 +980,10 @@ footer{
     <p class="lead rv">一日完整課程，09:30 – 18:30。內容從品牌定位、IG 內容企劃、AI 應用、手機攝影，一路到修圖與實際執行，分成五個階段循序進行。</p>
     <p class="lead rv" style="margin-top:20px">下面點開任何一個階段，左邊的手機就會顯示那個階段完成後的畫面。</p>
     <div class="flow2">
+      <div class="stage-tabs" id="stageTabs">
+        <div class="tabs-row" id="tabsRow"></div>
+        <p class="tabs-hint">點選上方階段，或左右滑動手機畫面</p>
+      </div>
       <div class="phone-col">
         <div class="iphone rv" id="phone">
           <div class="ip-body">
@@ -810,10 +991,31 @@ footer{
             <div class="ip-screen" id="screens"></div>
           </div>
         </div>
-        <p class="ip-cap" id="ipCap">品牌定位　IG 帳號整體規劃</p>
+        <p class="ip-cap" id="ipCap">品牌定位　真實帳號 @momizisalon</p>
       </div>
       <div class="steps rv" id="stepList"></div>
     </div>
+  </div>
+</section>
+
+
+<!-- ═══ TIMETABLE ═══ -->
+<section class="sec" data-nav="light" id="timetable">
+  <div class="wrap">
+    <p class="label rv">當日流程</p>
+    <h2 class="rv">一日完整實戰課程</h2>
+    <p class="lead rv">上課時間 09:30 － 18:30。請於 09:15 前完成報到入座，我們會先彼此認識，了解每位學員目前的品牌狀況。09:30 準時正式上課，請務必準時抵達 🤍</p>
+
+    <ol class="tt rv">
+      <li><span class="tt-t">09:15</span><span class="tt-c"><b>報到入座</b><em>彼此認識・了解每位學員目前的品牌狀況</em></span></li>
+      <li><span class="tt-t">09:30<i>12:30</i></span><span class="tt-c"><b>IG 品牌經營</b><em>品牌定位、內容方向、IG 經營與行銷思維</em></span></li>
+      <li class="tt--rest"><span class="tt-t">12:30<i>13:00</i></span><span class="tt-c"><b>午餐時間</b></span></li>
+      <li><span class="tt-t">13:00<i>15:00</i></span><span class="tt-c"><b>攝影概論</b><em>人像攝影＋靜物攝影基礎</em></span></li>
+      <li><span class="tt-t">15:00<i>17:00</i></span><span class="tt-c"><b>人像攝影實作</b><em>現場拍攝練習＋作品檢討</em></span></li>
+      <li><span class="tt-t">17:00<i>17:30</i></span><span class="tt-c"><b>靜物攝影實作</b><em>現場拍攝練習＋作品檢討</em></span></li>
+      <li><span class="tt-t">17:30<i>18:30</i></span><span class="tt-c"><b>專屬 7 天內容計畫</b><em>個人計畫介紹＋內容方向討論＋Q&amp;A</em></span></li>
+    </ol>
+    <p class="tt-end rv">完成屬於自己的課後執行方向後下課</p>
   </div>
 </section>
 
@@ -895,11 +1097,16 @@ footer{
         <p class="trole">品牌經營 × 內容行銷</p>
         <p>長期深耕美容產業與品牌經營，從技術服務、教育培訓到品牌代理，累積第一線實際經營經驗。課程中會從美容工作者真正會遇到的問題出發。</p>
         <ul class="tlist">
+          <li>Life Art 美業行銷廣告團隊<em>社群行銷講師／手機攝影講師</em></li>
+          <li>日系電商行銷設計</li>
           <li>MOMIZI SALON 創辦人</li>
-          <li>韓國 OSHARE 台灣總代理・首席講師</li>
-          <li>日本 TABAJUKU 台灣首位代表</li>
-          <li>法國 YUMI 認證講師</li>
-          <li>INCA 世界賽國際評審</li>
+          <li>日本 TABAJUKU 束塾　第一任台灣總代理<em>睫毛管理</em></li>
+          <li>韓國 OSHARE 品牌　台灣總講師<em>睫毛管理</em></li>
+          <li>韓國 OSHARE 品牌　台灣總經銷<em>睫毛管理</em></li>
+          <li>法國 YUMI 品牌　台灣發證講師<em>睫毛管理</em></li>
+          <li>韓國 GPF 美容協會國際聯合會　副會長</li>
+          <li>2023 K-Beauty 睫毛管理　國際評審</li>
+          <li>OSHARE、法國 YUMI、韓國 GPF 美容協會、KHSA　認證授證單位</li>
         </ul>
       </div>
     </div>
@@ -910,6 +1117,7 @@ footer{
         <p class="trole">手機攝影 × 品牌影像</p>
         <p>擁有 10 年以上攝影經驗，擅長人像、品牌形象與商業影像拍攝。課程中會將多年攝影美感結合美容產業的實際需求。</p>
         <ul class="tlist">
+          <li>攝影工作室設於高雄</li>
           <li>10 年以上攝影資歷</li>
           <li>人像・品牌形象・商業影像</li>
           <li>手機設定與光線教學</li>
@@ -944,30 +1152,19 @@ footer{
   <div class="wrap">
     <p class="label rv">報名</p>
     <h2 class="rv">選一個<br>妳可以來的日子</h2>
-    <p class="lead rv">2026 年台北場，每班限額，額滿即停止招生。其他場次時間將陸續公布。詳細上課地點將於課前通知。</p>
+    <p class="lead rv">首發場僅兩場，之後恢復正式開課價。台北場限 16 人、高雄場限 8 人，額滿即停止招生。高雄場由工作室設於高雄的 RuRu 老師主場，南部學員不必再北上。詳細上課地點將於課前通知。</p>
 
-    <div class="sess rv" id="sess" role="group" aria-label="選擇場次">
-      <button class="sbtn" type="button" data-d="10/14" aria-pressed="true">
-        <span class="sdot"></span>
-        <span><span class="sd">10 / 14</span><span class="sm">星期三　09:30 – 18:30</span></span>
-        <span class="city">台北</span>
-      </button>
-      <div class="sbtn soon">
-        <span class="sdot"></span>
-        <span><span class="sd">其他時間</span><span class="sm">等候發佈</span></span>
-        <span class="city">敬請期待</span>
-      </div>
-    </div>
+    <div class="sess rv" id="sess" role="group" aria-label="選擇場次"></div>
 
     <div class="price rv">
-      <p class="price-l">2026 全新改版首發價</p>
-      <div class="price-n"><s>NT$</s>6,500</div>
-      <p>單日完整課程・雙講師・含課後線上更新資料庫</p>
+      <p class="price-l" id="pTier">2026 全新改版首發價</p>
+      <div class="price-n"><s>NT$</s><span id="pNum">6,500</span></div>
+      <p id="pWhen">10 / 14（三）台北場・09:30 – 18:30</p>
 
       <ul class="pinfo">
-        <li><span>兩人同行</span><b>NT$12,000<em>每人 6,000・省 1,000</em></b></li>
+        <li><span>兩人同行</span><b id="pDuo">NT$12,000<em>每人 6,000・省 1,000</em></b></li>
         <li><span>付款方式</span><b>轉帳／信用卡／中租分期</b></li>
-        <li><span>名　　額</span><b>每班限額・額滿即止</b></li>
+        <li><span>名　　額</span><b id="pCap">台北場　限 16 人・額滿即止</b></li>
       </ul>
 
       <div class="said">
@@ -990,6 +1187,25 @@ footer{
         <li><b>05</b><span>填寫課前問卷<em>很重要，才能幫妳訂製 7 天發文計畫</em></span></li>
         <li><b>06</b><span>完成</span></li>
       </ol>
+    </div>
+
+
+    <div class="terms rv">
+      <p class="terms-h">報名與退費須知</p>
+      <dl class="terms-l">
+        <dt>七日猶豫期</dt>
+        <dd>透過 LINE 或網路完成報名者，自報名日起七日內（且於開課日前）可通知取消並全額退費。</dd>
+        <dt>開課日前</dt>
+        <dd>七日猶豫期後、開課日前提出取消者，退還已繳費用 90%（保留 10% 作行政與場地成本）。</dd>
+        <dt>開課當日起</dt>
+        <dd>課程當日開始後恕不退費。課程為完整一日制，無法分段補課。</dd>
+        <dt>改期</dt>
+        <dd>開課日七天前提出，可免費改期一次至其他已公告場次，不受場次價格差額影響。七天內提出恕不受理。</dd>
+        <dt>因故停課</dt>
+        <dd>因天災、講師不可抗力等因素停課，將另行安排場次或全額退費，由學員自行選擇。</dd>
+        <dt>課前問卷</dt>
+        <dd>繳費後會收到課前問卷，用於製作專屬 7 天內容計畫。未填寫仍可上課，但無法事先備妥個人化內容。</dd>
+      </dl>
     </div>
 
     <div class="bonus rv">
@@ -1036,8 +1252,8 @@ footer{
 
 <div class="dock" id="dock">
   <div>
-    <div class="dock-p">NT$6,500</div>
-    <div class="dock-s" id="dockS">台北　10 / 14</div>
+    <div class="dock-p" id="dockP">NT$6,500<i>起</i></div>
+    <div class="dock-s" id="dockS">首發場 10 / 14 起・台北・高雄</div>
   </div>
   <a class="btn" href="#enroll">報名</a>
 </div>
@@ -1052,7 +1268,8 @@ var IMG = {
   hero:'images/hero.jpg',
   close:'images/closing.jpg',
   leresa:'images/leresa.jpg',
-  ruru:'images/ruru.jpg'
+  ruru:'images/ruru.jpg',
+  avatar:'images/ig-avatar.jpg'
 };
 var SHOTS=[
  {s:'images/work-01.jpg',k:'前景層次',t:'用前景，讓平面變立體',b:'一朵花放在鏡頭與人之間，畫面就會有前後層次。窗邊的側逆光讓皮膚透亮，不需要另外補光。'},
@@ -1098,9 +1315,15 @@ function navTone(){
   nav.classList.toggle('on-light', t==='light');
   nav.classList.toggle('on-photo', t==='photo');
 }
+var lastY=0;
 window.addEventListener('scroll',function(){
   var y=window.scrollY;
   nav.classList.toggle('tight', y>60);
+  if(y>window.innerHeight*0.6){
+    if(y>lastY+6) nav.classList.add('hide');
+    else if(y<lastY-6) nav.classList.remove('hide');
+  } else nav.classList.remove('hide');
+  lastY=y;
   dock.classList.toggle('show', y>window.innerHeight*1.1);
   navTone();
 },{passive:true});
@@ -1143,6 +1366,7 @@ function tally(){
   var n=pw.querySelectorAll('.pain.on').length;
   var t=TIERS[n===0?0:(n<=3?1:(n<=6?2:3))];
   tn.textContent=n; tt.textContent=t.t; tb.textContent=t.b;
+  if(n===9) track('quiz_complete',{score:n});
   document.getElementById('qbar').style.width=(n/9*100)+'%';
 }
 
@@ -1177,7 +1401,7 @@ STEPS.forEach(function(st,i){
        '<span class="step-t">'+st.t+'</span>'+
        '<span class="step-d">'+st.d+'</span>'+
      '</span>'+
-     '<span class="step-x"></span>'+
+     '<span class="step-more">展開</span><span class="step-x"></span>'+
    '</button>'+
    '<div class="step-body"><div class="step-in"><p>'+st.p+'</p>'+
      '<ul class="tags">'+st.g.map(function(x){return '<li>'+x+'</li>'}).join('')+'</ul>'+
@@ -1186,7 +1410,7 @@ STEPS.forEach(function(st,i){
 });
 /* ── iPhone screens ── */
 var IPCAP=[
- '品牌定位　IG 帳號整體規劃',
+ '品牌定位　真實帳號 @momizisalon',
  '內容企劃　3–5 個內容支柱',
  'AI 工作流程　題材與腳本',
  '手機攝影　現場拍攝設定',
@@ -1194,14 +1418,22 @@ var IPCAP=[
 ];
 function g(i){ return SHOTS[i].s; }
 var SCREENS=[
- // 1 品牌定位
- '<div class="s-bar"><b>momizi.salon</b><i>個人檔案</i></div>'+
- '<div class="s-in">'+
-   '<div class="pf"><div class="pf-av">椛</div><div class="pf-st">'+
-     '<span><b>128</b>貼文</span><span><b>2,341</b>追蹤者</span><span><b>312</b>追蹤中</span>'+
-   '</div></div>'+
-   '<div class="pf-bio">設計感睫毛設計<br>新北 板橋・完全預約制<br>讓妳素顏也有神</div>'+
-   '<div class="chips"><span>自然裸妝感</span><span>單人包場</span><span>不趕客</span></div>'+
+ // 1 品牌定位（真實帳號資料）
+ '<div class="s-bar ig-bar"><b>momizisalon</b><i>⋯</i></div>'+
+ '<div class="s-in ig">'+
+   '<div class="ig-top">'+
+     '<div class="ig-av"><img src="'+IMG.avatar+'" alt=""></div>'+
+     '<div class="ig-st">'+
+       '<span><b>98</b>貼文</span><span><b>2,987</b>粉絲</span><span><b>709</b>追蹤中</span>'+
+     '</div>'+
+   '</div>'+
+   '<p class="ig-name">椛<i></i>睫毛管理服務 × 美睫教學</p>'+
+   '<p class="ig-bio">幫想入行零基礎女生｜學會客製化睫毛管理<br>'+
+     '從技術到接客流程｜建立自己的品牌與穩定客源<br>'+
+     '告別學完不敢做、客源不穩｜不用自己盲試踩坑<br>'+
+     '預約 1:1 創業諮詢<br>一起規劃你的美睫開店藍圖 ↓</p>'+
+   '<p class="ig-link">www.momizisalon.com 和另外 2 個</p>'+
+   '<div class="ig-btn"><span class="p">追蹤</span><span>發送訊息</span></div>'+
    '<div class="mini9">'+[0,1,2,3,4,5,6,7,8].map(function(i){
      return '<img src="'+g(i)+'" alt="">';}).join('')+'</div>'+
  '</div>',
@@ -1304,6 +1536,7 @@ SCREENS.forEach(function(html,i){
 var scrs=[].slice.call(scWrap.children);
 function setScreen(i){
   scrs.forEach(function(s,j){ s.classList.toggle('on', j===i); });
+  syncTabs(i);
   if(i===4){ initEd(); setTimeout(demoEd,400); }
   ipCap.style.opacity=0;
   setTimeout(function(){ ipCap.textContent=IPCAP[i]; ipCap.style.opacity=1; },260);
@@ -1311,6 +1544,45 @@ function setScreen(i){
 
 /* phone follows the open step; on narrow screens it moves inside it */
 var openIdx=0;
+var SHORT=['品牌定位','內容企劃','AI 流程','攝影實戰','修圖執行'];
+var tabsRow=document.getElementById('tabsRow'), tabEls=[];
+SHORT.forEach(function(n,i){
+  var b=document.createElement('button');
+  b.type='button'; b.className='tab'; b.dataset.i=i;
+  b.setAttribute('aria-pressed', i===0);
+  b.innerHTML='<b>0'+(i+1)+'</b><span>'+n+'</span>';
+  tabsRow.appendChild(b); tabEls.push(b);
+});
+tabsRow.addEventListener('click',function(e){
+  var b=e.target.closest('.tab'); if(!b) return;
+  var i=+b.dataset.i;
+  stepEls[i].querySelector('.step-hd').click();
+});
+function syncTabs(i){
+  tabEls.forEach(function(b,j){ b.setAttribute('aria-pressed', j===i); });
+}
+
+/* 手機畫面本身也能左右滑動切換階段 */
+(function(){
+  var ph=document.getElementById('phone'); if(!ph) return;
+  var x0=null,y0=null;
+  ph.addEventListener('touchstart',function(e){
+    x0=e.touches[0].clientX; y0=e.touches[0].clientY;
+  },{passive:true});
+  ph.addEventListener('touchend',function(e){
+    if(x0===null) return;
+    var dx=e.changedTouches[0].clientX-x0, dy=e.changedTouches[0].clientY-y0;
+    x0=null;
+    if(Math.abs(dx)<46 || Math.abs(dx)<Math.abs(dy)*1.4) return;
+    var next=openIdx+(dx<0?1:-1);
+    if(next<0||next>4) return;
+    stepEls[next].querySelector('.step-hd').click();
+  },{passive:true});
+})();
+var sio2=new IntersectionObserver(function(es){
+  if(es[0].isIntersecting){ es[0].target.classList.add('seen'); sio2.disconnect(); }
+},{threshold:.25});
+sio2.observe(document.getElementById('stepList'));
 function placePhone(){
   var bd=stepEls[openIdx] && stepEls[openIdx].querySelector('.step-body');
   if(bd && stepEls[openIdx].classList.contains('on')){
@@ -1470,13 +1742,14 @@ renderWeek();
 
 /* ── faq ── */
 var FAQ=[
- ['這是第一次開這堂課嗎？','是。這是 2026 全新改版後的首發場，內容從原本的攝影課升級成品牌、內容、AI 與攝影四合一。首發場採首發價，名額也比後續場次少。'],
- ['可以分期嗎？','可以。付款方式有轉帳、信用卡與中租分期，報名後我會把細節傳給妳。兩人同行報名為 NT$12,000。'],
+ ['這是第一次開這堂課嗎？','是。10/14 台北與 11/02 高雄是 2026 全新改版後的首發場，內容從原本的攝影課升級成品牌、內容、AI 與攝影四合一，採首發價 NT$6,500。11/25 之後的場次恢復正式開課價 NT$8,800。'],
+ ['可以分期嗎？','可以。付款方式有轉帳、信用卡與中租分期，報名後我會把細節傳給妳。兩人同行另有優惠價，實際金額依場次而定。'],
  ['完全沒有經營過 IG，可以來嗎？','可以。課程是從品牌定位開始，第一步就是幫妳把要說什麼想清楚，再往內容與拍攝走。反而是還沒建立習慣的人，比較不用重新調整既有版面。'],
  ['需要準備什麼器材嗎？','一支手機就可以。整堂攝影實戰都是以手機拍攝為主，包含設定、光線、構圖與修圖，不需要準備昂貴的攝影器材。'],
  ['我不是做美睫的，其他項目適合嗎？','適合。課程針對的是美容工作者共同會遇到的問題——作品要怎麼被看見、品牌要怎麼被記得。美甲、紋繡、護膚、頭皮養護或教學招生，都可以套用同一套方法。'],
  ['完全不會用 AI，跟得上嗎？','跟得上。這個段落是從零開始帶，重點不是教妳懂 AI，而是給妳一套可以直接複製使用的 Prompt，回去打開就能用。'],
- ['上課地點在哪裡？','台北場，詳細地點會於課前另行通知。時間是 09:30 到 18:30，為完整一日課程。'],
+ ['上課地點在哪裡？','分台北場與高雄場兩地。高雄場由工作室設於高雄的 RuRu 老師主場，南部學員不必北上。兩地的詳細地點都會於課前另行通知，時間同為 09:30 到 18:30，完整一日課程。'],
+ ['報名後可以退費或改期嗎？','報名後七日內（且於開課日前）可全額退費。之後到開課日前取消，退還 90%。課程當日開始後恕不退費，但開課七天前可免費改期一次到其他場次。完整說明在報名區的「報名與退費須知」。'],
  ['怎麼報名？','用 LINE 跟我說「我要報名行銷攝影 2.0」，並告訴我想上的場次，我會再把報名方式與注意事項傳給妳。']
 ];
 var fw=document.getElementById('faq');
@@ -1500,7 +1773,7 @@ window.addEventListener('resize',function(){
 });
 
 /* ── LINE：填入官方帳號 @ID 即可自動帶入訊息 ── */
-var LINE_ID = '';                          // ← 例如 '@075yhqqb'
+var LINE_ID = '@075yhqqb';                          // ← 例如 '@075yhqqb'
 var LINE_URL = 'https://lin.ee/sIBZM7Y';   // 沒填 ID 時走這個
 function lineHref(text){
   return LINE_ID ? 'https://line.me/R/oaMessage/'+encodeURIComponent(LINE_ID)+'/?'+encodeURIComponent(text)
@@ -1512,16 +1785,95 @@ function syncCta(){
   document.querySelectorAll('.close .btn').forEach(function(b){ b.href=lineHref(t); });
 }
 
-/* ── session ── */
-var msg=document.getElementById('msg'), dockS=document.getElementById('dockS');
-document.getElementById('sess').addEventListener('click',function(e){
-  var b=e.target.closest('.sbtn'); if(!b) return;
-  [].slice.call(this.children).forEach(function(x){ x.setAttribute('aria-pressed',x===b); });
-  msg.textContent='我要報名行銷攝影 2.0（'+b.dataset.d+' 台北場）';
-  dockS.textContent='台北　'+b.dataset.d.replace('/',' / ');
-  syncCta();
+/* ── 場次與價格 ── */
+var TIERS={
+  first:{name:'首發場',price:6500,pstr:'6,500',duo:'NT$12,000',duoNote:'每人 6,000・省 1,000',
+         label:'2026 全新改版首發價'},
+  main: {name:'正式場',price:8800,pstr:'8,800',duo:'NT$17,000',duoNote:'每人 8,500・省 600',
+         label:'正式開課價'}
+};
+var SESSIONS=[
+ {t:'first',y:'2026',d:'10/14',w:'三',city:'台北',cap:'限 16 人'},
+ {t:'first',y:'2026',d:'11/02',w:'一',city:'高雄',cap:'限 8 人'},
+ {t:'main', y:'2026',d:'11/25',w:'三',city:'台北',cap:'限 16 人'},
+ {t:'main', y:'2026',d:'12/16',w:'三',city:'台北',cap:'限 16 人'},
+ {t:'main', y:'2027',d:'03/10',w:'三',city:'台北',cap:'限 16 人'},
+ {t:'main', y:'2027',d:'03/21',w:'日',city:'高雄',cap:'限 8 人'}
+];
+
+var sessWrap=document.getElementById('sess');
+['first','main'].forEach(function(key){
+  var T=TIERS[key], list=SESSIONS.filter(function(x){return x.t===key});
+  var g=document.createElement('div');
+  g.className='tgrp'+(key==='main'?' tgrp--main':'');
+  g.innerHTML='<div class="tgrp-h">'+
+      '<span class="tgrp-n">'+T.name+'</span>'+
+      '<span class="tgrp-p">NT$'+T.pstr+'</span>'+
+      '<span class="tgrp-d">兩人同行 '+T.duo+(T.duoNote?'（'+T.duoNote+'）':'')+'</span>'+
+    '</div>';
+  list.forEach(function(x){
+    var b=document.createElement('button');
+    b.type='button'; b.className='sbtn';
+    b.dataset.t=x.t; b.dataset.d=x.d; b.dataset.w=x.w; b.dataset.city=x.city; b.dataset.y=x.y; b.dataset.cap=x.cap;
+    b.setAttribute('aria-pressed','false');
+    b.innerHTML='<span class="sdot"></span>'+
+      '<span><span class="sd">'+x.d.replace('/',' / ')+'</span>'+
+      '<span class="sm">'+x.y+'　星期'+x.w+'　09:30 – 18:30</span></span>'+
+      '<span class="city">'+x.city+'<em>'+x.cap+'</em></span>';
+    g.appendChild(b);
+  });
+  var soon=document.createElement('div');
+  if(key==='main'){
+    soon.className='sbtn soon';
+    soon.innerHTML='<span class="sdot"></span><span><span class="sd">其他時間</span>'+
+      '<span class="sm">等候發佈</span></span><span class="city">敬請期待</span>';
+    g.appendChild(soon);
+  }
+  sessWrap.appendChild(g);
 });
-syncCta();
+
+var msg=document.getElementById('msg'), dockS=document.getElementById('dockS'),
+    dockP=document.getElementById('dockP');
+var LINE_ID = '@075yhqqb';                          // ← 填入官方帳號，例如 '@075yhqqb'
+var LINE_URL = 'https://lin.ee/sIBZM7Y';
+function lineHref(text){
+  return LINE_ID ? 'https://line.me/R/oaMessage/'+encodeURIComponent(LINE_ID)+'/?'+encodeURIComponent(text)
+                 : LINE_URL;
+}
+function choose(b,byUser){
+  [].slice.call(sessWrap.querySelectorAll('.sbtn')).forEach(function(x){
+    if(!x.classList.contains('soon')) x.setAttribute('aria-pressed', x===b);
+  });
+  var T=TIERS[b.dataset.t];
+  document.getElementById('pTier').textContent=T.label;
+  document.getElementById('pNum').textContent=T.pstr;
+  document.getElementById('pWhen').textContent=
+    b.dataset.d.replace('/',' / ')+'（'+b.dataset.w+'）'+b.dataset.city+'場・09:30 – 18:30';
+  document.getElementById('pDuo').innerHTML=
+    T.duo+(T.duoNote?'<em>'+T.duoNote+'</em>':'');
+  var pc=document.getElementById('pCap');
+  if(pc) pc.textContent=b.dataset.city+'場　'+b.dataset.cap+'・額滿即止';
+  msg.textContent='我要報名行銷攝影 2.0（'+b.dataset.d+' '+b.dataset.city+'場）';
+  if(byUser){
+    if(dockP) dockP.textContent='NT$'+T.pstr;
+    if(dockS) dockS.textContent=T.name+'　'+b.dataset.city+'　'+b.dataset.d.replace('/',' / ');
+  }
+  if(byUser) track('select_session',{session:b.dataset.d,city:b.dataset.city,tier:b.dataset.t});
+  var a=document.getElementById('ctaMain');
+  if(a) a.href=lineHref(msg.textContent);
+  document.querySelectorAll('.close .btn').forEach(function(x){ x.href=lineHref(msg.textContent); });
+}
+sessWrap.addEventListener('click',function(e){
+  var b=e.target.closest('.sbtn');
+  if(!b || b.classList.contains('soon')) return;
+  choose(b,true);
+});
+choose(sessWrap.querySelector('.sbtn'),false);
+
+document.addEventListener('click',function(e){
+  var a=e.target.closest('a[href*="line"]');
+  if(a) track('click_enroll',{where:a.id||a.className||'link'});
+});
 })();
 </script>
 </body>
